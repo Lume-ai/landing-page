@@ -107,11 +107,11 @@ export const LLMModelSelectorSkeleton = () => {
               className={cn(
                 "rounded-sm border px-2 py-0.5 text-xs",
                 model.variant === "success" &&
-                  "border-emerald-500 bg-emerald-50 text-emerald-500 dark:bg-emerald-50/10",
+                "border-emerald-500 bg-emerald-50 text-emerald-500 dark:bg-emerald-50/10",
                 model.variant === "warning" &&
-                  "border-yellow-500 bg-yellow-50 text-yellow-500 dark:bg-yellow-50/10",
+                "border-yellow-500 bg-yellow-50 text-yellow-500 dark:bg-yellow-50/10",
                 model.variant === "danger" &&
-                  "border-red-500 bg-red-50 text-red-500 dark:bg-red-50/10",
+                "border-red-500 bg-red-50 text-red-500 dark:bg-red-50/10",
               )}
             >
               {model.status}
@@ -424,13 +424,13 @@ export const NativeToolsIntegrationSkeleton = () => {
       <motion.div className="relative mx-auto my-12 hidden h-full max-h-70 min-h-80 max-w-[67rem] grid-cols-2 p-4 lg:grid">
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-10">
-            <TextIconBlock icon={<WindowIcon />} text="Meeting Summarizer">
+            <TextIconBlock icon={<WindowIcon />} text="Shipment Documentation Automation">
               <TopSVG className="absolute top-2 -right-84" />
             </TextIconBlock>
-            <TextIconBlock icon={<CodeIcon />} text="Code Reviewer">
+            <TextIconBlock icon={<CodeIcon />} text="Freight Booking & Scheduling">
               <MiddleSVG className="absolute top-2 -right-84" />
             </TextIconBlock>
-            <TextIconBlock icon={<PhoneIcon />} text="Customer Support">
+            <TextIconBlock icon={<PhoneIcon />} text="Exception Management in Supply Chain">
               <BottomSVG className="absolute -right-84 bottom-2" />
             </TextIconBlock>
           </div>

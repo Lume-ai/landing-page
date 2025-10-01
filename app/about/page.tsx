@@ -31,20 +31,47 @@ export default function AboutPage() {
           <div className="flex flex-col items-start justify-start">
             <Badge text="About Us" />
             <Heading className="mt-4 text-left">
-              We're Building the Future of Agent-Driven Development
+              We’re Building the Future of Autonomous Business Operations
             </Heading>
-            <SubHeading className="mt-6 mr-auto text-left">
-              Founded by engineers and AI researchers, Notus was born out of a
-              simple frustration: building intelligent systems still required
-              too much manual orchestration. We set out to change that by
-              creating a tool that lets teams design, simulate, and launch
-              autonomous agents visually and intuitively.
-              <br /> <br />
-              Today, Notus powers next-gen workflows for startups, dev teams,
-              and AI-first platforms across the globe. Whether you're automating
-              internal ops, scaling customer support, or building complex
-              multi-agent systems.
-            </SubHeading>
+            {/* <SubHeading className="mt-6 mr-auto text-left"> */}
+            <div className="space-y-6 text-left text-gray-700 leading-relaxed mt-12">
+
+              <p>
+                Manual processes still dominate the backbone of business — from
+                logistics and supply chains to finance and compliance. Endless
+                handoffs, spreadsheets, and exceptions slow teams down and cost
+                companies millions.
+              </p>
+
+              <p>
+                We founded <span className="font-semibold">Notus</span> with a
+                simple mission:{" "}
+                <span className="italic">
+                  to bring AI agents into the heart of business operations, so
+                  companies can run faster, leaner, and more intelligently.
+                </span>
+              </p>
+
+              <p>
+                Our team of engineers and AI researchers believes automation should
+                go beyond static scripts and rigid RPA. That’s why we’re building
+                agents that reason, act, and adapt — powering the workflows that
+                keep businesses moving.
+              </p>
+
+              <p>
+                Today, Notus helps organizations streamline critical operations
+                across logistics, manufacturing, finance, and HR. From shipment
+                scheduling to invoice reconciliation, our AI agents deliver real
+                outcomes: fewer errors, lower costs, and faster execution.
+              </p>
+
+              <p className="font-medium text-gray-900">
+                Because the future of work isn’t just about automating tasks. <br />
+                It’s about <span className="text-indigo-600">autonomous operations at scale.</span>
+              </p>
+            </div>
+            {/* </SubHeading> */}
           </div>
           <div className="border-divide rounded-3xl border p-2">
             <Image
@@ -92,7 +119,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Container>
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Container className="border-divide border-x border-t p-4 py-20 md:px-8 md:py-40">
         <div className="grid grid-cols-1 gap-10 md:gap-20 lg:grid-cols-2">
           <div className="flex flex-col items-start justify-start">
@@ -104,11 +131,11 @@ export default function AboutPage() {
               We empower developers and technical teams to create, simulate, and
               manage AI-driven workflows visually
             </SubHeading>
-            <div className="divide-divide mt-8 grid grid-cols-3 gap-6">
+            {/* <div className="divide-divide mt-8 grid grid-cols-3 gap-6">
               <MetricBlock value="1.2M+" label="Workflows created" />
               <MetricBlock value="6.4k" label="Tech Community" />
               <MetricBlock value="1.2K" label="G2 reviews" />
-            </div>
+            </div> */}
           </div>
           <InformationBlock />
         </div>
@@ -240,7 +267,7 @@ export default function AboutPage() {
                     {Math.floor(
                       (new Date().getTime() -
                         new Date(career.createdAt).getTime()) /
-                        (1000 * 60 * 60 * 24),
+                      (1000 * 60 * 60 * 24),
                     )}{" "}
                     days ago
                   </span>

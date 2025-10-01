@@ -2,31 +2,31 @@ export const faqs = [
   {
     question: "What exactly does this platform do?",
     answer:
-      "Our platform lets you design, deploy, and manage AI-powered agentic workflows that can combine both automated (AI) and manual steps. These workflows connect to your existing tools (like Slack, Notion, or Google Sheets) and use AI agents to complete tasks.",
+      "We deploy autonomous AI agents that handle your logistics and operational workflows end-to-end. From shipment booking and customs paperwork to invoice reconciliation and exception management, our agents reason, act, and adapt — so your team can focus on strategic work, not manual tasks.",
   },
   {
-    question: "How do I get started with creating my first workflow?",
+    question: "How do I get started?",
     answer:
-      "Start by using our drag-and-drop interface to design your workflow. Connect the tools you already use, define the steps (both AI and manual), and test everything in our sandbox environment before deploying. No coding required.",
+      "It's simple: you choose a workflow you want automated — for example, shipment scheduling or invoice processing — and our team deploys an AI agent tailored to that process. No complex setup or configuration required. You'll see results in days, not months.",
   },
   {
     question: "What tools and services can I integrate?",
     answer:
-      "We support hundreds of integrations including Slack, Notion, Google Workspace, Salesforce, GitHub, Zapier, and many more. You can also connect custom APIs and databases through our flexible connector system.",
+      "Our agents connect seamlessly with the systems you already use: ERP, TMS, WMS, CRM, HRIS, and finance platforms. We also support APIs, databases, and cloud apps — making it easy to slot into your existing operations without disruption.",
   },
   {
     question: "Is my data secure when using AI agents?",
     answer:
-      "Yes, we take security seriously. All data is encrypted in transit and at rest, we're SOC 2 compliant, and you maintain full control over what data your agents can access. Agents only interact with the specific tools and data you explicitly authorize.",
+      "Yes. Security and compliance are built in from day one. We support SOC II, GDPR, and HIPAA standards, with encryption, role-based access, and full audit trails for every agent action. You stay in control of your data at all times.",
   },
   {
     question: "Can I test workflows before they go live?",
     answer:
-      "Absolutely. Our sandbox environment lets you preview and debug workflow logic safely before deployment. You can test different scenarios, validate agent behavior, and ensure everything works as expected without affecting your live systems.",
+      "Absolutely. Every agent is deployed in a controlled pilot phase where you can monitor performance, review outcomes, and fine-tune exceptions. Once validated, the workflow can be scaled confidently across your teams.",
   },
   {
     question: "What's the difference between automated and manual steps?",
     answer:
-      "Automated steps are handled entirely by AI agents (like data analysis, content generation, or API calls), while manual steps require human input or approval. You can mix both types to create workflows that leverage AI efficiency while maintaining human oversight where needed.",
+      "Automated steps are fully handled by the agent — such as generating documents, booking shipments, or reconciling invoices. Manual steps only occur when exceptions arise, and the agent will route those to the right human stakeholder. This keeps operations smooth while ensuring critical decisions always get the right oversight.",
   },
 ];

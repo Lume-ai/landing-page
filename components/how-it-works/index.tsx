@@ -23,25 +23,25 @@ type Tab = {
 export const HowItWorks = () => {
   const tabs = [
     {
-      title: "Design your Workflow",
+      title: "Choose a workflow",
       description:
-        "A drag-and-drop interface to create, connect, and configure agents into logical workflows",
+        "Work with the Lume team to create, connect, and configure custom agents into logical workflows tailored to your needs. Or choose from our library of out-of-the-box agents that seamlessly configure to your existing systems and processes.",
       icon: FirstIcon,
       id: "workflow",
       skeleton: <DesignYourWorkflowSkeleton />,
     },
     {
-      title: "Connect your Tools",
+      title: "Deploy an agent and connect your tools",
       description:
-        "Agents operate independently and coordinate tasks to complete all complex goals together",
+        "Seamlessly integrate your AI agents with your existing tech stack. Connect to your CRM, databases, APIs, and communication tools with pre-built integrations. Our agents work with the tools you already use, requiring minimal setup and configuration.",
       icon: SecondIcon,
       id: "tools",
       skeleton: <ConnectYourTooklsSkeleton />,
     },
     {
-      title: "Deploy & Scale",
+      title: "Monitor & optimize",
       description:
-        "Run agent workflows in a sandbox to preview behavior, debug logic, and test interactions",
+        "Your agents continuously learn and improve over time, becoming more efficient with every interaction. Track performance metrics in real-time and let AI handle the routine tasks while your team focuses on exceptions that truly need human attention.",
       icon: ThirdIcon,
       id: "deploy",
       skeleton: <DeployAndScaleSkeleton />,
@@ -65,11 +65,10 @@ export const HowItWorks = () => {
     <Container className="border-divide border-x">
       <div className="flex flex-col items-center pt-16">
         <Badge text="How it works" />
-        <SectionHeading className="mt-4">Integrates easily</SectionHeading>
+        <SectionHeading className="mt-4">Deploy AI agents in 3 simple steps</SectionHeading>
 
         <SubHeading as="p" className="mx-auto mt-6 max-w-lg">
-          We empower developers and technical teams to create, simulate, and
-          manage AI-driven workflows visually
+          From setup to scale, we've streamlined the entire process so you can get your AI agents up and running quickly
         </SubHeading>
         {/* Desktop Tabs */}
         <div className="border-divide divide-divide mt-16 hidden w-full grid-cols-2 divide-x border-t lg:grid">

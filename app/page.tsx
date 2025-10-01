@@ -33,9 +33,9 @@ export default function Home() {
       <UseCases />
       <DivideX />
       <Benefits />
-      <DivideX />
+      {/* <DivideX />
       <Testimonials />
-      <DivideX />
+      <DivideX /> */}
       <Pricing />
       <DivideX />
       <Security />

@@ -25,39 +25,39 @@ import { VerticalLine } from "./common/vertical-line";
 export const Benefits = () => {
   const benefits = [
     {
-      title: "Launch Faster",
+      title: "Faster Operations",
       description:
-        "Visually orchestrate autonomous agents without writing boilerplate code",
+        "Cut processing times from days to minutes by automating shipment booking, documentation, and reconciliations.",
       icon: <RocketIcon className="text-brand size-6" />,
     },
     {
-      title: "Iterate Rapidly",
+      title: "Lower Costs",
       description:
-        "Visually orchestrate autonomous agents without writing boilerplate code",
+        "Reduce reliance on outsourcing and manual labor, saving up to 50% on operational expenses.",
       icon: <RealtimeSyncIcon className="text-brand size-6" />,
     },
     {
-      title: "Scale Smarter",
+      title: "Fewer Errors",
       description:
-        "Visually orchestrate autonomous agents without writing boilerplate code",
+        "Eliminate mistakes in paperwork, scheduling, and compliance with agents that validate and cross-check every step.",
       icon: <GraphIcon className="text-brand size-6" />,
     },
     {
-      title: "Reuse Intelligence",
+      title: "Resilient Supply Chains",
       description:
-        "Visually orchestrate autonomous agents without writing boilerplate code",
-      icon: <ReuseBrainIcon className="text-brand size-6" />,
-    },
-    {
-      title: "Prevent Breakdowns",
-      description:
-        "Visually orchestrate autonomous agents without writing boilerplate code",
+        "Prevent costly breakdowns with real-time exception handling — rerouting, rescheduling, and alerting before issues escalate.",
       icon: <ShieldIcon className="text-brand size-6" />,
     },
     {
-      title: "Automate More",
+      title: "Scalable Efficiency",
       description:
-        "Visually orchestrate autonomous agents without writing boilerplate code",
+        "Start with one workflow, expand to dozens. AI agents grow with your business across logistics, finance, HR, and beyond.",
+      icon: <ReuseBrainIcon className="text-brand size-6" />,
+    },
+    {
+      title: "Full Visibility",
+      description:
+        "Track every agent action — triggers, tools used, outcomes, and success rates — with dashboards and audit logs.",
       icon: <ScreenCogIcon className="text-brand size-6" />,
     },
   ];
@@ -66,12 +66,11 @@ export const Benefits = () => {
       <div className="relative flex flex-col items-center">
         <Badge text="Benefits" />
         <SectionHeading className="mt-4">
-          Making Engineers 10x faster
+          Run Operations 10x Faster
         </SectionHeading>
 
         <SubHeading as="p" className="mx-auto mt-6 max-w-lg">
-          We empower developers and technical teams to create, simulate, and
-          manage AI-driven workflows visually
+          Reduce manual effort, eliminate errors, and keep your supply chain moving with autonomous AI agents.
         </SubHeading>
       </div>
       <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-3">

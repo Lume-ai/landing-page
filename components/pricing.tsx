@@ -31,8 +31,11 @@ export const Pricing = () => {
       <Container className="border-divide flex flex-col items-center justify-center border-x pt-10 pb-10">
         <Badge text="Pricing" />
         <SectionHeading className="mt-4">
-          Simple and Feasible Pricing
+          Simple tiers. Built for scale.
         </SectionHeading>
+        <p className="mt-4 max-w-3xl text-center text-lg text-gray-600 dark:text-neutral-400">
+          Whether you&apos;re streamlining a single workflow or automating across global operations, we have a plan that fits your needs.
+        </p>
         <div className="relative mt-8 flex items-center gap-4 rounded-xl bg-gray-50 p-2 dark:bg-neutral-800">
           <Scale className="opacity-50" />
           {tabs.map((tab) => (
@@ -61,57 +64,68 @@ export const Pricing = () => {
       </Container>
       <DivideX />
       <Container className="border-divide border-x">
-        <div className="divide-divide grid grid-cols-1 divide-y md:grid-cols-3 md:divide-x md:divide-y-0">
-          {tiers.map((tier, tierIdx) => (
-            <div className="p-4 md:p-8" key={tier.title + "tier-meta"}>
-              <h3 className="text-charcoal-700 text-xl font-medium dark:text-neutral-100">
-                {tier.title}
-              </h3>
-              <p className="text-base text-gray-600 dark:text-neutral-400">
-                {tier.subtitle}
-              </p>
-              <span className="mt-6 flex items-baseline-last text-2xl font-medium dark:text-white">
-                $
-                <Price
-                  value={activeTier === "monthly" ? tier.monthly : tier.yearly}
-                />
-                <span className="ml-2 text-sm font-normal">/seat</span>
-              </span>
+        <div className="mx-auto max-w-4xl">
+          <div className="divide-divide grid grid-cols-1 divide-y md:grid-cols-2 md:divide-x md:divide-y-0">
+            {tiers.map((tier, tierIdx) => (
+              <div className="p-4 md:p-8" key={tier.title + "tier-meta"}>
+                <h3 className="text-charcoal-700 text-xl font-medium dark:text-neutral-100">
+                  {tier.title}
+                </h3>
+                <p className="mt-2 text-base text-gray-600 dark:text-neutral-400">
+                  {tier.subtitle}
+                </p>
 
-              <div
-                key={tier.title + "tier-list-of-items"}
-                className="flex flex-col gap-4 px-0 py-4 md:hidden md:p-8"
-              >
-                {tier.features.map((tierFeature, idx) => (
-                  <Step key={tierFeature + tierIdx + idx}>{tierFeature}</Step>
-                ))}
+                <div
+                  key={tier.title + "tier-list-of-items"}
+                  className="flex flex-col gap-4 px-0 py-6 md:hidden"
+                >
+                  {tier.features.map((tierFeature, idx) => (
+                    <Step key={tierFeature + tierIdx + idx}>{tierFeature}</Step>
+                  ))}
+                </div>
+                <Button
+                  className="mt-6 w-full"
+                  as={Link}
+                  href={tier.ctaLink}
+                  variant={tier.featured ? "brand" : "secondary"}
+                >
+                  {tier.ctaText}
+                </Button>
               </div>
-              <Button
-                className="mt-6 w-full"
-                as={Link}
-                href={tier.ctaLink}
-                variant={tier.featured ? "brand" : "secondary"}
-              >
-                {tier.ctaText}
-              </Button>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Container>
       <DivideX />
       <Container className="border-divide hidden border-x md:block">
-        <div className="divide-divide grid grid-cols-1 md:grid-cols-3 md:divide-x">
-          {tiers.map((tier, index) => (
-            <div
-              key={tier.title + "tier-list-of-items"}
-              className="flex flex-col gap-4 p-4 md:p-8"
-            >
-              {tier.features.map((tierFeature, idx) => (
-                <Step key={tierFeature + index + idx}>{tierFeature}</Step>
-              ))}
-            </div>
-          ))}
+        <div className="mx-auto max-w-4xl">
+          <div className="divide-divide grid grid-cols-1 md:grid-cols-2 md:divide-x">
+            {tiers.map((tier, index) => (
+              <div
+                key={tier.title + "tier-list-of-items"}
+                className="flex flex-col gap-4 p-4 md:p-8"
+              >
+                {tier.features.map((tierFeature, idx) => (
+                  <Step key={tierFeature + index + idx}>{tierFeature}</Step>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
+      </Container>
+      <DivideX />
+      <Container className="border-divide flex flex-col items-center justify-center border-x py-16">
+        <h3 className="text-2xl font-medium dark:text-white">
+          Let&apos;s discuss the right plan for your business.
+        </h3>
+        <Button
+          className="mt-6"
+          as={Link}
+          href="/contact"
+          variant="brand"
+        >
+          Book a Demo
+        </Button>
       </Container>
     </section>
   );

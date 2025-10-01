@@ -34,10 +34,10 @@ export const CTA = () => {
     <Container className="border-divide relative flex min-h-60 flex-col items-center justify-center overflow-hidden border-x px-4 py-4 md:min-h-120">
       <CTAOrbit className="absolute inset-x-0 -top-120 mask-b-from-30%" />
       <SectionHeading className="relative z-10 text-center lg:text-6xl">
-        Connect your Current Stack <br /> and Start Automating
+        Put Your Operations <br /> on Autopilot
       </SectionHeading>
       <Button as={Link} href="/sign-up" className="relative z-20 mt-4">
-        Start Building for Free
+        Book a Demo
       </Button>
     </Container>
   );
@@ -93,10 +93,10 @@ export const CTAOrbit: React.FC<CTAOrbitProps> = ({
     numRings <= 1
       ? [(innerScale + outerScale) / 2]
       : Array.from(
-          { length: numRings },
-          (_, i) =>
-            innerScale + ((outerScale - innerScale) * i) / (numRings - 1),
-        );
+        { length: numRings },
+        (_, i) =>
+          innerScale + ((outerScale - innerScale) * i) / (numRings - 1),
+      );
 
   const renderRing = (ringIndex: number) => {
     const ringLogos = rings[ringIndex];

@@ -7,16 +7,16 @@ import { SectionHeading } from "../seciton-heading";
 import { Card, CardDescription, CardTitle } from "./card";
 import {
   BrainIcon,
-  FingerprintIcon,
-  MouseBoxIcon,
   NativeIcon,
-  RealtimeSyncIcon,
-  SDKIcon,
 } from "@/icons/bento-icons";
 import {
-  LLMModelSelectorSkeleton,
+  BellIcon,
+  GraphIcon,
+  RocketIcon,
+  ShieldIcon,
+} from "@/icons/card-icons";
+import {
   NativeToolsIntegrationSkeleton,
-  TextToWorkflowBuilderSkeleton,
 } from "./skeletons";
 
 type Tab = {
@@ -36,34 +36,9 @@ export const AgenticIntelligence = () => {
         </SectionHeading>
 
         <SubHeading as="p" className="mx-auto mt-6 max-w-lg px-2">
-          Build, test and deploy AI agents with a powerful visual interface
-          designed for technical teams
+          Enterprise-grade AI agents that integrate with your existing systems and adapt to your workflows — from logistics and supply chain to finance, HR, and compliance.
         </SubHeading>
-        <div className="border-divide divide-divide mt-16 grid grid-cols-1 divide-y border-y md:grid-cols-2 md:divide-x">
-          <Card className="overflow-hidden mask-b-from-80%">
-            <div className="flex items-center gap-2">
-              <BrainIcon />
-              <CardTitle>LLM Model Selector</CardTitle>
-            </div>
-            <CardDescription>
-              Track real-time activity of agents with detailed records of
-              triggers, tools used, outcomes, and timestamps.
-            </CardDescription>
-            <LLMModelSelectorSkeleton />
-          </Card>
-          <Card className="overflow-hidden mask-b-from-80%">
-            <div className="flex items-center gap-2">
-              <MouseBoxIcon />
-              <CardTitle>Text to workflow builder</CardTitle>
-            </div>
-            <CardDescription>
-              Preview and debug workflow logic in a safe sandbox before
-              deploying, helping you iterate with confidence.
-            </CardDescription>
-            <TextToWorkflowBuilderSkeleton />
-          </Card>
-        </div>
-        <div className="w-full">
+        <div className="w-full mt-16">
           <Card className="relative w-full max-w-none overflow-hidden">
             <div className="pointer-events-none absolute inset-0 h-full w-full bg-[radial-gradient(var(--color-dots)_1px,transparent_1px)] mask-radial-from-10% [background-size:10px_10px]"></div>
             <div className="flex items-center gap-2">
@@ -71,8 +46,7 @@ export const AgenticIntelligence = () => {
               <CardTitle>Native Tools Integration</CardTitle>
             </div>
             <CardDescription>
-              Track real-time activity of agents with detailed records of
-              triggers, tools used, outcomes, and timestamps.
+              Connect seamlessly with ERP, TMS, WMS, CRM, HRIS, and finance platforms. Every agent action is logged with triggers, tools used, outcomes, and timestamps.
             </CardDescription>
             <NativeToolsIntegrationSkeleton />
           </Card>
@@ -80,32 +54,29 @@ export const AgenticIntelligence = () => {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <Card>
             <div className="flex items-center gap-2">
-              <FingerprintIcon />
-              <CardTitle>One Click Auth</CardTitle>
+              <BellIcon className="size-6" />
+              <CardTitle>Exception Handling & Human-in-the-Loop</CardTitle>
             </div>
             <CardDescription>
-              A drag-and-drop interface to create, connect, and configure agents
-              into logical workflows
+              Agents automatically escalate edge cases to your team, ensuring smooth operations while keeping humans in control of critical decisions.
             </CardDescription>
           </Card>
           <Card>
             <div className="flex items-center gap-2">
-              <RealtimeSyncIcon />
-              <CardTitle>Realtime Sync</CardTitle>
+              <GraphIcon className="size-6" />
+              <CardTitle>Continuous Improvement</CardTitle>
             </div>
             <CardDescription>
-              Agents operate independently and coordinate tasks to complete
-              complex all goals
+              Agents learn from historical outcomes and operator feedback, reducing errors and getting smarter over time — without manual reprogramming.
             </CardDescription>
           </Card>
           <Card>
             <div className="flex items-center gap-2">
-              <SDKIcon />
-              <CardTitle>Custom Connector SDK</CardTitle>
+              <RocketIcon className="size-6" />
+              <CardTitle>Rapid Deployment</CardTitle>
             </div>
             <CardDescription>
-              Run agent workflows in a sandbox to preview behavior, debug logic,
-              and test interactions
+              Skip the endless workflow setup. Our team deploys tailored AI agents directly into your processes, delivering value in days, not months.
             </CardDescription>
           </Card>
         </div>
