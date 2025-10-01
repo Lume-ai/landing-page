@@ -4,7 +4,6 @@ import { Container } from "./container";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { Dot } from "./common/dots";
-import { HeroProduct } from "./hero-product";
 
 const springConfig = {
   stiffness: 300,
@@ -71,7 +70,7 @@ export const HeroImage = () => {
             translateY,
           }}
         >
-          {/* <Image
+          <Image
             src="/dashboard@3x.png"
             alt="Hero Image"
             className="w-full"
@@ -79,8 +78,7 @@ export const HeroImage = () => {
             width={1000}
             height={1000}
             draggable={false}
-          /> */}
-          <HeroProduct />
+          />
         </motion.div>
         <div className="absolute inset-0 z-0 m-auto h-[90%] w-[95%] rounded-lg border border-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed"></div>
       </div>
