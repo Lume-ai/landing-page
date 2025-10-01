@@ -71,12 +71,12 @@ export const HeroImage = () => {
           }}
         >
           <Image
-            src="/dashboard@3x.png"
+            src="/hero_prod_2_1.png"
             alt="Hero Image"
             className="w-full"
             priority
-            width={1000}
-            height={1000}
+            width={1500}
+            height={859}
             draggable={false}
           />
         </motion.div>
