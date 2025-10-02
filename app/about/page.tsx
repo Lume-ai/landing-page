@@ -27,14 +27,14 @@ export default function AboutPage() {
     <main>
       <DivideX />
       <Container className="border-divide flex flex-col items-center justify-center border-x px-4 pt-10 pb-10 md:px-8 md:pt-32 md:pb-20">
-        <div className="grid grid-cols-1 gap-20 md:grid-cols-2">
+        <div className="flex flex-col items-start justify-start max-w-4xl">
           <div className="flex flex-col items-start justify-start">
             <Badge text="About Us" />
             <Heading className="mt-4 text-left">
-              We’re Building the Future of Autonomous Business Operations
+              We're Building the Future of Autonomous Business Operations
             </Heading>
             {/* <SubHeading className="mt-6 mr-auto text-left"> */}
-            <div className="space-y-6 text-left text-gray-700 leading-relaxed mt-12">
+            <div className="space-y-6 text-left text-gray-700 leading-relaxed mt-12 dark:text-neutral-200">
 
               <p>
                 Manual processes still dominate the backbone of business — from
@@ -54,7 +54,7 @@ export default function AboutPage() {
 
               <p>
                 Our team of engineers and AI researchers believes automation should
-                go beyond static scripts and rigid RPA. That’s why we’re building
+                go beyond static scripts and rigid RPA. That's why we're building
                 agents that reason, act, and adapt — powering the workflows that
                 keep businesses moving.
               </p>
@@ -66,21 +66,12 @@ export default function AboutPage() {
                 outcomes: fewer errors, lower costs, and faster execution.
               </p>
 
-              <p className="font-medium text-gray-900">
-                Because the future of work isn’t just about automating tasks. <br />
-                It’s about <span className="text-indigo-600">autonomous operations at scale.</span>
+              <p className="font-medium text-gray-900 dark:text-white">
+                Because the future of work isn't just about automating tasks. <br />
+                It's about <span className="text-indigo-600 dark:text-indigo-400">autonomous operations at scale.</span>
               </p>
             </div>
             {/* </SubHeading> */}
-          </div>
-          <div className="border-divide rounded-3xl border p-2">
-            <Image
-              src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="About Us"
-              width={1000}
-              height={1000}
-              className="h-full rounded-2xl object-cover"
-            />
           </div>
         </div>
         <div className="mt-20 flex w-full flex-col items-center lg:flex-row">
@@ -89,7 +80,7 @@ export default function AboutPage() {
           </h2>
           <div className="grid w-full grid-cols-2 items-center gap-4 md:grid-cols-3">
             <a
-              href="https://techcrunch.com"
+              href="https://techcrunch.com/2024/11/12/general-catalyst-and-khosla-ventures-back-data-mapping-startup-lume/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70 transition-opacity"
@@ -103,7 +94,7 @@ export default function AboutPage() {
               />
             </a>
             <a
-              href="https://forbes.com"
+              href="https://www.forbes.com/profile/lume/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70 transition-opacity"
@@ -117,7 +108,7 @@ export default function AboutPage() {
               />
             </a>
             <a
-              href="https://siliconangle.com"
+              href="https://siliconangle.com/2024/11/12/data-mapping-provider-lume-raises-4-2m-funding/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70 transition-opacity"
