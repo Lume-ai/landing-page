@@ -71,7 +71,7 @@ export const HeroImage = () => {
           }}
         >
           <Image
-            src="/hero_prod_2_1.png"
+            src="/product/dashboard_hero.png"
             alt="Hero Image"
             className="w-full rounded-lg"
             priority
