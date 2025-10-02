@@ -1,3 +1,6 @@
+import { IconBlock } from "@/components/common/icon-block";
+import Image from "next/image";
+
 export const GartnerLogo = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
@@ -103,6 +106,7 @@ export const Star = (props: React.SVGProps<SVGSVGElement>) => {
     </svg>
   );
 };
+
 
 export const SlackLogo = (props: React.SVGProps<SVGSVGElement>) => {
   return (
@@ -575,6 +579,248 @@ export const SunIcon = (props: React.SVGProps<SVGSVGElement>) => {
       <path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" />
       <path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" />
       <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
+    </svg>
+  );
+};
+
+
+export const OracleLogo = ({ size = 8, ...props }: React.SVGProps<SVGSVGElement> & { size?: number }) => {
+  return (
+    <Image src="/logos/app_logos/oracle.png" alt="Oracle Icon" width={100} height={100} className={`size-${size} object-contain`} />
+  );
+};
+
+export const SAPLogo = ({ size = 8, ...props }: React.SVGProps<SVGSVGElement> & { size?: number }) => {
+  return (
+    <Image src="/logos/app_logos/sap.png" alt="Sap Icon" width={100} height={100} className={`size-${size} object-contain`} />
+  );
+};
+
+export const ExcelLogo = ({ size = 8, ...props }: React.SVGProps<SVGSVGElement> & { size?: number }) => {
+  return (
+    <Image src="/logos/app_logos/excel.png" alt="Excel Icon" width={100} height={100} className={`size-${size} object-contain`} />
+  );
+};
+
+export const BlueyonderLogo = ({ size = 8, ...props }: React.SVGProps<SVGSVGElement> & { size?: number }) => {
+  return (
+    <Image src="/logos/app_logos/blueyonder.png" alt="Blueyonder Icon" width={100} height={100} className={`size-${size} object-contain`} />
+  );
+};
+
+export const SnowflakeLogo = ({ size = 8, ...props }: React.SVGProps<SVGSVGElement> & { size?: number }) => {
+  return (
+    <Image src="/logos/app_logos/snowflake.png" alt="Snowflake Icon" width={100} height={100} className={`size-${size} object-contain`} />
+  );
+};
+
+// Logistics Icons
+export const PackageIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M7 1.16675L1.75 4.08341V9.91675L7 12.8334L12.25 9.91675V4.08341L7 1.16675Z"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 7L12.25 4.08334"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 7V12.8333"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 7L1.75 4.08334"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const TruckIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M9.33341 10.5C9.88569 10.5 10.3334 10.0523 10.3334 9.5C10.3334 8.94772 9.88569 8.5 9.33341 8.5C8.78113 8.5 8.33341 8.94772 8.33341 9.5C8.33341 10.0523 8.78113 10.5 9.33341 10.5Z"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M3.66675 10.5C4.21904 10.5 4.66675 10.0523 4.66675 9.5C4.66675 8.94772 4.21904 8.5 3.66675 8.5C3.11447 8.5 2.66675 8.94772 2.66675 9.5C2.66675 10.0523 3.11447 10.5 3.66675 10.5Z"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8.33341 9.5H4.66675M2.66675 9.5H1.16675V3.5H8.33341V9.5M8.33341 5.5H10.9167L12.8334 7.41667V9.5H10.3334"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const InvoiceIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M8.16675 1.16675H3.50008C3.14646 1.16675 2.80732 1.30722 2.55727 1.55727C2.30722 1.80732 2.16675 2.14646 2.16675 2.50008V11.6667L4.08341 10.5001L5.83341 11.6667L7.58341 10.5001L9.33341 11.6667V6.41675"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4.08325 4.66675H6.99992"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4.08325 7H5.83325"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M11.8334 3.79175V4.66675C11.8334 5.02037 11.6929 5.35951 11.4429 5.60956C11.1928 5.85961 10.8537 6.00008 10.5001 6.00008H9.62508C9.27146 6.00008 8.93232 5.85961 8.68227 5.60956C8.43222 5.35951 8.29175 5.02037 8.29175 4.66675V3.79175C8.29175 3.43813 8.43222 3.09899 8.68227 2.84894C8.93232 2.59889 9.27146 2.45841 9.62508 2.45841H10.5001C10.8537 2.45841 11.1928 2.59889 11.4429 2.84894C11.6929 3.09899 11.8334 3.43813 11.8334 3.79175Z"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const CartIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M5.25008 12.25C5.61827 12.25 5.91675 11.9515 5.91675 11.5833C5.91675 11.2152 5.61827 10.9167 5.25008 10.9167C4.88189 10.9167 4.58341 11.2152 4.58341 11.5833C4.58341 11.9515 4.88189 12.25 5.25008 12.25Z"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10.9167 12.25C11.2849 12.25 11.5834 11.9515 11.5834 11.5833C11.5834 11.2152 11.2849 10.9167 10.9167 10.9167C10.5485 10.9167 10.25 11.2152 10.25 11.5833C10.25 11.9515 10.5485 12.25 10.9167 12.25Z"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M1.16675 1.75H2.91675L4.52508 9.15333C4.58825 9.44289 4.75051 9.70165 4.98622 9.88632C5.22193 10.071 5.51608 10.1688 5.81841 10.1667H10.6167C10.9191 10.1688 11.2132 10.071 11.4489 9.88632C11.6846 9.70165 11.8469 9.44289 11.9101 9.15333L12.8334 4.66667H3.50008"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const ShieldCheckIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M7.00008 12.8333C7.00008 12.8333 11.6667 10.5 11.6667 7V3.20833L7.00008 1.16666L2.33341 3.20833V7C2.33341 10.5 7.00008 12.8333 7.00008 12.8333Z"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4.66675 7L6.41675 8.75L9.33341 5.83333"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const HeadsetIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M11.0834 9.33333V7C11.0834 5.89493 10.6445 4.83512 9.86309 4.05372C9.08169 3.27232 8.02189 2.83333 6.91675 2.83333C5.81161 2.83333 4.75181 3.27232 3.97041 4.05372C3.18901 4.83512 2.75008 5.89493 2.75008 7V9.33333"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M11.0834 9.33333C11.4685 9.33333 11.838 9.48625 12.1099 9.75818C12.3818 10.0301 12.5347 10.3996 12.5347 10.7847V10.7847C12.5347 11.1698 12.3818 11.5393 12.1099 11.8112C11.838 12.0832 11.4685 12.2361 11.0834 12.2361H10.5001V8.75H11.0834V9.33333ZM2.75008 9.33333C2.36501 9.33333 1.9955 9.48625 1.72357 9.75818C1.45165 10.0301 1.29883 10.3996 1.29883 10.7847V10.7847C1.29883 11.1698 1.45165 11.5393 1.72357 11.8112C1.9955 12.0832 2.36501 12.2361 2.75008 12.2361H3.33341V8.75H2.75008V9.33333Z"
+        stroke="currentColor"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 };

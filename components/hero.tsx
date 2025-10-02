@@ -23,7 +23,7 @@ export const Hero = () => {
       </SubHeading>
 
       <div className="mt-6 flex items-center gap-4">
-        <Button as={Link} href="/sign-up">
+        <Button as={Link} href="https://cal.com/team/lume/lume-intro-20" target="_blank" rel="noopener noreferrer">
           Book a demo
         </Button>
         {/* <Button variant="secondary" as={Link} href="/pricing">

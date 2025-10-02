@@ -4,15 +4,13 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import {
   AnthropicLogo,
-  AppleIcon,
-  FacebookIcon,
-  GoogleIcon,
-  LinearLogo,
+  BlueyonderLogo,
+  ExcelLogo,
   MetaLogo,
-  NotionLogo,
   OpenAILogo,
-  SlackLogo,
-  SupabaseLogo,
+  OracleLogo,
+  SAPLogo,
+  SnowflakeLogo,
 } from "@/icons/general";
 import { Container } from "./container";
 import { SectionHeading } from "./seciton-heading";
@@ -36,12 +34,13 @@ export const CTA = () => {
       <SectionHeading className="relative z-10 text-center lg:text-6xl">
         Put Your Operations <br /> on Autopilot
       </SectionHeading>
-      <Button as={Link} href="/sign-up" className="relative z-20 mt-4">
+      <Button as={Link} href="https://cal.com/team/lume/lume-intro-20" className="relative z-20 mt-4" target="_blank" rel="noopener noreferrer">
         Book a Demo
       </Button>
     </Container>
   );
 };
+
 
 export const CTAOrbit: React.FC<CTAOrbitProps> = ({
   size = 800,
@@ -51,19 +50,14 @@ export const CTAOrbit: React.FC<CTAOrbitProps> = ({
   numRings = 3,
 }) => {
   const logos = [
-    SupabaseLogo,
+    SAPLogo,
+    OracleLogo,
+    BlueyonderLogo,
+    ExcelLogo,
+    SnowflakeLogo,
     OpenAILogo,
     MetaLogo,
-    SlackLogo,
-    NotionLogo,
-    LinearLogo,
     AnthropicLogo,
-    SupabaseLogo,
-    OpenAILogo,
-    MetaLogo,
-    GoogleIcon,
-    FacebookIcon,
-    AppleIcon,
   ];
   const total = logos.length;
 

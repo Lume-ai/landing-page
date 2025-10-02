@@ -87,6 +87,8 @@ export const Pricing = () => {
                   className="mt-6 w-full"
                   as={Link}
                   href={tier.ctaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   variant={tier.featured ? "brand" : "secondary"}
                 >
                   {tier.ctaText}
@@ -121,7 +123,9 @@ export const Pricing = () => {
         <Button
           className="mt-6"
           as={Link}
-          href="/contact"
+          href="https://cal.com/team/lume/lume-intro-20"
+          target="_blank"
+          rel="noopener noreferrer"
           variant="brand"
         >
           Book a Demo

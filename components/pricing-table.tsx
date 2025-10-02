@@ -12,7 +12,7 @@ export const PricingTable = () => {
   const [cycle, setCycle] = useState<"monthly" | "yearly">("monthly");
 
   const orderedTierNames: TierName[] = useMemo(
-    () => [TierName.TIER_1, TierName.TIER_2, TierName.TIER_3],
+    () => [TierName.TIER_1, TierName.TIER_2],
     [],
   );
 
@@ -49,7 +49,7 @@ export const PricingTable = () => {
                         className={cn(
                           "relative z-10 rounded-md px-3 py-1 text-sm text-gray-800 dark:text-white",
                           cycle === opt.value &&
-                            "shadow-aceternity bg-white dark:bg-neutral-900 dark:text-white",
+                          "shadow-aceternity bg-white dark:bg-neutral-900 dark:text-white",
                         )}
                         aria-pressed={
                           cycle === (opt.value as "monthly" | "yearly")
@@ -76,11 +76,13 @@ export const PricingTable = () => {
                     </div>
                     <Button
                       as={Link}
-                      href="/sign-up"
+                      href="https://cal.com/team/lume/lume-intro-20"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="mt-4 w-full"
                       variant="secondary"
                     >
-                      Start for free
+                      Book a demo
                     </Button>
                   </th>
                 ))}

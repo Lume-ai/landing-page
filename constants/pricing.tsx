@@ -12,8 +12,8 @@ export const tiers = [
     subtitle: "For growing companies ready to automate critical workflows.",
     monthly: 0,
     yearly: 0,
-    ctaText: "Contact us to learn more",
-    ctaLink: "/contact",
+    ctaText: "Talk to our team",
+    ctaLink: "https://cal.com/team/lume/lume-intro-20",
     features: [
       "Deploy AI agents for logistics, finance, HR, and support",
       "Native integrations with ERP, TMS, CRM, HRIS, and finance tools",
@@ -29,7 +29,7 @@ export const tiers = [
     monthly: 0,
     yearly: 0,
     ctaText: "Talk to our team",
-    ctaLink: "/contact",
+    ctaLink: "https://cal.com/team/lume/lume-intro-20",
     features: [
       "Everything in Business, plus:",
       "SOC 2, GDPR, and HIPAA readiness",

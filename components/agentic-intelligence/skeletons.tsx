@@ -10,11 +10,11 @@ import {
 import { DivideX } from "../divide";
 import {
   AnthropicLogo,
+  ExcelLogo,
   LinearLogo,
   MetaLogo,
-  NotionLogo,
   OpenAILogo,
-  SlackLogo,
+  OracleLogo,
   SupabaseLogo,
 } from "@/icons/general";
 import { motion } from "motion/react";
@@ -449,16 +449,36 @@ export const NativeToolsIntegrationSkeleton = () => {
               Connected
             </span>
             <div className="absolute inset-x-0 -top-30 flex h-full flex-col items-center">
-              <IconBlock icon={<NotionLogo className="size-6" />} />
+              <IconBlock icon={<ExcelLogo />} />
               <VerticalLine />
               <VerticalLine />
-              <IconBlock icon={<LinearLogo className="size-6" />} />
+              <IconBlock icon={<OracleLogo />} />
             </div>
           </div>
           <div className="2 absolute -top-4 right-30 flex h-full flex-col items-center">
-            <IconBlock icon={<SupabaseLogo className="size-6" />} />
+            <IconBlock
+              icon={
+                <Image
+                  src="/logos/app_logos/sap.png"
+                  alt="Sap Icon"
+                  width={100}
+                  height={100}
+                  className="size-8 object-contain"
+                />
+              }
+            />
             <VerticalLine />
-            <IconBlock icon={<SlackLogo className="size-6" />} />
+            <IconBlock
+              icon={
+                <Image
+                  src="/logos/app_logos/blueyonder.png"
+                  alt="Sap Icon"
+                  width={100}
+                  height={100}
+                  className="size-6 rounded-sm object-contain"
+                />
+              }
+            />
           </div>
           <RightSideSVG />
           <IconBlock icon={<OpenAILogo className="size-6" />} />

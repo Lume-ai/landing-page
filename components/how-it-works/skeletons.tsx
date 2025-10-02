@@ -1,10 +1,18 @@
 "use client";
 import {
   AnthropicLogo,
+  ExcelLogo,
   ForkIcon,
   MetaLogo,
   OpenAILogo,
+  SAPLogo,
   SlackLogo,
+  PackageIcon,
+  TruckIcon,
+  InvoiceIcon,
+  CartIcon,
+  ShieldCheckIcon,
+  HeadsetIcon,
 } from "@/icons/general";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useMemo, useRef, useState } from "react";
@@ -20,9 +28,9 @@ export const DesignYourWorkflowSkeleton = () => {
     <div className="mt-12 flex flex-col items-center">
       <div className="relative">
         <Card
-          title="Slack"
-          subtitle="#standups"
-          logo={<SlackLogo />}
+          title="SAP"
+          subtitle="TMS"
+          logo={<SAPLogo />}
           cta="Connected"
           tone="default"
         />
@@ -33,28 +41,28 @@ export const DesignYourWorkflowSkeleton = () => {
 
       <div className="mt-12 flex flex-row gap-4.5">
         <Card
-          title="Anthropic"
-          subtitle="Claude 4"
+          title="Call Operator"
+          subtitle="Call Center"
           logo={<AnthropicLogo />}
-          cta="UI Generator"
+          cta="Call Operator"
           tone="danger"
           delay={0.2}
-        />
-        <Card
-          title="Meta"
-          subtitle="Llama 2"
-          logo={<MetaLogo />}
-          cta="Text Generator"
-          tone="default"
-          delay={0.4}
         />
         <Card
           title="OpenAI"
           subtitle="GPT-5"
           logo={<OpenAILogo />}
-          cta="Code Generator"
+          cta="Agent Orchestrator"
           tone="success"
           delay={0.6}
+        />
+        <Card
+          title="Excel"
+          subtitle="Input Data"
+          logo={<ExcelLogo size={6} />}
+          cta="Data Generator"
+          tone="default"
+          delay={0.4}
         />
       </div>
     </div>
@@ -62,7 +70,7 @@ export const DesignYourWorkflowSkeleton = () => {
 };
 
 export const ConnectYourTooklsSkeleton = () => {
-  const text = `Write the first and second rule of it using Claude and ChatGPT.`;
+  const text = `Extract HS codes from invoices and fill out customs forms.`;
   const [mounted, setMounted] = useState(false);
   const randomWidth = useMemo(() => Math.random() * 100, [mounted]);
 
@@ -157,7 +165,6 @@ export const ConnectYourTooklsSkeleton = () => {
         className="relative h-70 w-60 translate-x-10 rounded-2xl border-t border-gray-300 bg-white p-4 shadow-2xl md:translate-x-0 dark:border-neutral-700 dark:bg-neutral-900"
       >
         <div className="absolute -top-4 -left-4 flex h-14 w-14 items-center justify-center rounded-lg bg-white shadow-xl dark:bg-neutral-800">
-          <Scale />
           <LogoSVG className="relative z-20 h-8 w-8" />
         </div>
         <div className="mt-12 flex items-center gap-2">
@@ -172,9 +179,9 @@ export const ConnectYourTooklsSkeleton = () => {
         <DivideX className="mt-2" />
         <div className="mt-4 flex items-center justify-between gap-2">
           <div className="flex items-center gap-2">
-            <OpenAILogo className="h-4 w-4 shrink-0" />
+            <SAPLogo className="h-4 w-4 shrink-0" />
             <span className="text-charcoal-700 text-xs font-medium md:text-sm dark:text-neutral-200">
-              ChatGPT
+              SAP
             </span>
           </div>
 
@@ -184,9 +191,9 @@ export const ConnectYourTooklsSkeleton = () => {
         </div>
         <div className="mt-4 flex items-center justify-between gap-2">
           <div className="flex items-center gap-2">
-            <AnthropicLogo className="h-4 w-4 shrink-0" />
+            <ExcelLogo className="h-4 w-4 shrink-0" />
             <span className="text-charcoal-700 text-xs font-medium md:text-sm dark:text-neutral-200">
-              Claude 4 Opus
+              Manual Documents
             </span>
           </div>
 
@@ -226,66 +233,82 @@ export const DeployAndScaleSkeleton = () => {
 
   // Define deploy cards data for reusability
   const deployCards = [
-    { title: "deploy-dev-eu-324", subtitle: "2h ago", branch: "master" },
     {
-      title: "deploy-prod-eu-128",
-      subtitle: "10m ago",
-      branch: "main",
-      variant: "success" as const,
-    },
-    { title: "deploy-dev-us-445", subtitle: "45m ago", branch: "feature/auth" },
-    {
-      title: "deploy-prod-ap-223",
-      subtitle: "1h ago",
-      branch: "main",
-      variant: "success" as const,
-    },
-    {
-      title: "deploy-dev-eu-891",
+      title: "customs-declare-eu-324",
       subtitle: "2h ago",
-      branch: "fix/cache",
+      process: "customs",
+      variant: "success" as const,
+    },
+    {
+      title: "shipment-clear-ap-223",
+      subtitle: "1h ago",
+      process: "shipping",
+      variant: "success" as const,
+    },
+    {
+      title: "invoice-match-us-445",
+      subtitle: "45m ago",
+      process: "finance",
       variant: "warning" as const,
     },
     {
-      title: "deploy-prod-us-337",
-      subtitle: "3h ago",
-      branch: "main",
+      title: "rate-quote-eu-128",
+      subtitle: "10m ago",
+      process: "procurement",
       variant: "success" as const,
     },
     {
-      title: "deploy-dev-ap-556",
-      subtitle: "4h ago",
-      branch: "feat/api",
+      title: "inventory-update-us-891",
+      subtitle: "7h ago",
+      process: "inventory",
       variant: "danger" as const,
     },
     {
-      title: "deploy-dev-eu-672",
-      subtitle: "5h ago",
-      branch: "feat/search",
-      variant: "default" as const,
-    },
-    {
-      title: "deploy-prod-ap-445",
-      subtitle: "6h ago",
-      branch: "main",
-      variant: "success" as const,
-    },
-    {
-      title: "deploy-dev-us-891",
-      subtitle: "7h ago",
-      branch: "fix/perf",
+      title: "hs-classify-ap-556",
+      subtitle: "4h ago",
+      process: "customs",
       variant: "warning" as const,
     },
     {
-      title: "deploy-prod-eu-223",
-      subtitle: "8h ago",
-      branch: "main",
+      title: "duty-calc-eu-672",
+      subtitle: "5h ago",
+      process: "customs",
+      variant: "default" as const,
+    },
+    {
+      title: "customer-notify-prod-445",
+      subtitle: "6h ago",
+      process: "service",
       variant: "success" as const,
     },
     {
-      title: "deploy-dev-ap-337",
+      title: "delivery-confirm-us-337",
+      subtitle: "3h ago",
+      process: "last-mile",
+      variant: "success" as const,
+    },
+    {
+      title: "po-generate-ap-778",
+      subtitle: "30m ago",
+      process: "procurement",
+      variant: "success" as const,
+    },
+    {
+      title: "invoice-reconcile-eu-119",
+      subtitle: "8h ago",
+      process: "finance",
+      variant: "warning" as const,
+    },
+    {
+      title: "shipment-delay-alert-ap-441",
+      subtitle: "20m ago",
+      process: "shipping",
+      variant: "danger" as const,
+    },
+    {
+      title: "export-docs-us-555",
       subtitle: "9h ago",
-      branch: "feat/analytics",
+      process: "compliance",
       variant: "default" as const,
     },
   ];
@@ -349,67 +372,113 @@ export const DeployAndScaleSkeleton = () => {
         className="absolute left-1/2 flex w-full -translate-x-1/2 flex-col items-center"
         style={{ y }}
       >
-        {extendedCards.map((card, index) => (
-          <motion.div
-            key={`${index}-${card.title}`}
-            className="mx-auto mt-4 w-full max-w-sm shrink-0 rounded-2xl shadow-xl"
-            style={{
-              scale: useTransform(
-                y,
-                [
-                  offset + (index - 2) * -itemHeight,
-                  offset + (index - 1) * -itemHeight,
-                  offset + index * -itemHeight,
-                  offset + (index + 1) * -itemHeight,
-                  offset + (index + 2) * -itemHeight,
-                ],
-                [0.85, 0.95, 1.1, 0.95, 0.85],
-              ),
+        {extendedCards.map((card, index) => {
+          const highlightColor = getHighlightColor(card.variant);
 
-              background: useTransform(
-                y,
-                [
-                  offset + (index - 1) * -itemHeight,
-                  offset + index * -itemHeight,
-                  offset + (index + 1) * -itemHeight,
-                ],
-                ["#FFFFFF", "#f17463", "#FFFFFF"],
-              ),
-              borderColor: useTransform(
-                y,
-                [
-                  offset + (index - 1) * -itemHeight,
-                  offset + index * -itemHeight,
-                  offset + (index + 1) * -itemHeight,
-                ],
-                ["#FFFFFF", "#f17463", "#FFFFFF"],
-              ),
-            }}
-          >
-            <DeployCard
-              variant={card.variant}
-              title={card.title}
-              subtitle={card.subtitle}
-              branch={card.branch}
-            />
-          </motion.div>
-        ))}
+          return (
+            <motion.div
+              key={`${index}-${card.title}`}
+              className="mx-auto mt-4 w-full max-w-sm shrink-0 rounded-2xl shadow-xl"
+              style={{
+                scale: useTransform(
+                  y,
+                  [
+                    offset + (index - 2) * -itemHeight,
+                    offset + (index - 1) * -itemHeight,
+                    offset + index * -itemHeight,
+                    offset + (index + 1) * -itemHeight,
+                    offset + (index + 2) * -itemHeight,
+                  ],
+                  [0.85, 0.95, 1.1, 0.95, 0.85],
+                ),
+
+                background: useTransform(
+                  y,
+                  [
+                    offset + (index - 1) * -itemHeight,
+                    offset + index * -itemHeight,
+                    offset + (index + 1) * -itemHeight,
+                  ],
+                  ["#FFFFFF", highlightColor, "#FFFFFF"],
+                ),
+                borderColor: useTransform(
+                  y,
+                  [
+                    offset + (index - 1) * -itemHeight,
+                    offset + index * -itemHeight,
+                    offset + (index + 1) * -itemHeight,
+                  ],
+                  ["#FFFFFF", highlightColor, "#FFFFFF"],
+                ),
+              }}
+            >
+              <DeployCard
+                variant={card.variant}
+                title={card.title}
+                subtitle={card.subtitle}
+                process={card.process}
+              />
+            </motion.div>
+          );
+        })}
       </motion.div>
     </div>
   );
+};
+
+// Helper function to get the appropriate icon for each process type
+const getProcessIcon = (process: string) => {
+  switch (process) {
+    case "customs":
+      return PackageIcon;
+    case "shipping":
+      return TruckIcon;
+    case "finance":
+      return InvoiceIcon;
+    case "procurement":
+      return CartIcon;
+    case "inventory":
+      return PackageIcon;
+    case "service":
+      return HeadsetIcon;
+    case "last-mile":
+      return TruckIcon;
+    case "compliance":
+      return ShieldCheckIcon;
+    default:
+      return PackageIcon;
+  }
+};
+
+// Helper function to get highlight color based on variant
+const getHighlightColor = (variant: "default" | "danger" | "success" | "warning") => {
+  switch (variant) {
+    case "success":
+      return "#4ade80"; // green-400
+    case "warning":
+      return "#fbbf24"; // yellow-400
+    case "danger":
+      return "#f87171"; // red-400
+    case "default":
+      return "#9ca3af"; // gray-400
+    default:
+      return "#9ca3af";
+  }
 };
 
 const DeployCard = ({
   variant = "default",
   title,
   subtitle,
-  branch,
+  process,
 }: {
   variant?: "default" | "danger" | "success" | "warning";
   title: string;
   subtitle: string;
-  branch: string;
+  process: string;
 }) => {
+  const ProcessIcon = getProcessIcon(process);
+
   return (
     <div className="mx-auto flex w-full max-w-sm items-center justify-between rounded-lg p-3">
       <div className="flex items-center gap-2">
@@ -422,7 +491,7 @@ const DeployCard = ({
             variant === "warning" && "bg-yellow-200",
           )}
         >
-          <ForkIcon
+          <ProcessIcon
             className={cn(
               "h-4 w-4",
               variant === "default" && "text-gray-500",
@@ -441,7 +510,7 @@ const DeployCard = ({
           {subtitle}
         </span>
         <div className="size-1 rounded-full bg-gray-400"></div>
-        <span className="text-charcoal-700 text-xs font-normal">{branch}</span>
+        <span className="text-charcoal-700 text-xs font-normal capitalize">{process}</span>
       </div>
     </div>
   );

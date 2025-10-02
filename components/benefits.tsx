@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { Container } from "./container";
 import { Badge } from "./badge";
 import { SectionHeading } from "./seciton-heading";
@@ -17,7 +18,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { RealtimeSyncIcon } from "@/icons/bento-icons";
 import { DivideX } from "./divide";
 import { LogoSVG } from "./logo";
-import { OpenAILogo, SlackLogo } from "@/icons/general";
+import { OpenAILogo, SAPLogo } from "@/icons/general";
 import { IconBlock } from "./common/icon-block";
 import { HorizontalLine } from "./common/horizontal-line";
 import { VerticalLine } from "./common/vertical-line";
@@ -91,7 +92,7 @@ export const Benefits = () => {
 };
 
 const MiddleCard = () => {
-  const texts = ["Meeting created", "Chat history saved", "You talking to me"];
+  const texts = ["Customs form submitted", "Bill of lading generated", "Data synced to ERP"];
   const [activeText, setActiveText] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -114,7 +115,7 @@ const MiddleCard = () => {
           </div>
         </div>
         <HorizontalLine />
-        <IconBlock icon={<SlackLogo className="size-6" />} />
+        <IconBlock icon={<SAPLogo size={8} />} />
       </div>
       <div className="relative z-20 flex flex-col items-center justify-center">
         <VerticalLine />
@@ -156,9 +157,9 @@ const MiddleCard = () => {
 
               <div className="mt-4 flex flex-col gap-y-3 mask-b-from-50%">
                 {[
-                  { label: "API Calls", width: 85 },
-                  { label: "Success Rate", width: 92 },
-                  { label: "Workflows", width: 65 },
+                  { label: "Workflows Automated", width: 85 },
+                  { label: "Errors Eliminated", width: 92 },
+                  { label: "Cost Savings", width: 65 },
                 ].map((item, index) => (
                   <div key={item.label} className="space-y-1">
                     <div className="flex items-center justify-between text-xs">

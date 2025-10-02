@@ -18,7 +18,7 @@ export default function PricingPage() {
       <DivideX />
       <Pricing />
       <DivideX />
-      <PricingTable />
+      {/* <PricingTable /> */}
       {/* <DivideX /> */}
       <FAQs />
       <DivideX />

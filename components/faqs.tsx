@@ -59,12 +59,9 @@ export const FAQs = () => {
         what you're looking for?
       </SubHeading>
       <div className="mt-8 mb-12 flex w-full flex-col justify-center gap-4 px-4 sm:flex-row">
-        <Button variant="primary" className="w-full sm:w-auto">
-          Read Docs
-        </Button>
         <Button
           as="a"
-          href="mailto:support@example.com"
+          href="mailto:support@lume.ai"
           variant="secondary"
           className="w-full sm:w-auto"
         >

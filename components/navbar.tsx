@@ -102,10 +102,12 @@ const MobileNav = ({ items }: { items: { title: string; href: string }[] }) => {
                 <Button
                   onClick={() => setIsOpen(false)}
                   as={Link}
-                  href="/sign-up"
+                  href="https://cal.com/team/lume/lume-intro-20"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full"
                 >
-                  Start building
+                  Book a demo
                 </Button>
               </div>
             </div>
@@ -137,8 +139,8 @@ const DesktopNav = ({
       </div>
       <div className="flex items-center gap-2">
         <ModeToggle />
-        <Button as={Link} href="/sign-up">
-          Start building
+        <Button as={Link} href="https://cal.com/team/lume/lume-intro-20" target="_blank" rel="noopener noreferrer">
+          Book a demo
         </Button>
       </div>
     </div>
@@ -178,8 +180,8 @@ const FloatingNav = ({
       </div>
       <div className="flex items-center gap-2">
         <ModeToggle />
-        <Button as={Link} href="/sign-up">
-          Start building
+        <Button as={Link} href="https://cal.com/team/lume/lume-intro-20" target="_blank" rel="noopener noreferrer">
+          Book a demo
         </Button>
       </div>
     </motion.div>
