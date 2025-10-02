@@ -7,9 +7,9 @@ import { PricingTable } from "@/components/pricing-table";
 import { getSEOTags } from "@/lib/seo";
 
 export const metadata = getSEOTags({
-  title: "Pricing - Notus | Aceternity UI Pro Template",
+  title: "Pricing - Lume AI",
   description:
-    "Notus is a platform for building agentic workflows. It allows you to design, simulate, and launch autonomous agents visually and intuitively.",
+    "Lume AI is a platform for building agentic workflows for business automation.",
 });
 
 export default function PricingPage() {

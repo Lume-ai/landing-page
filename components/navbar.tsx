@@ -14,7 +14,14 @@ import {
 } from "motion/react";
 import { ModeToggle } from "./mode-toggle";
 
-const items = [
+type NavItem = {
+  title: string;
+  href: string;
+  target?: string;
+  rel?: string;
+};
+
+const items: NavItem[] = [
   {
     title: "Pricing",
     href: "/pricing",
@@ -45,7 +52,7 @@ export const Navbar = () => {
   );
 };
 
-const MobileNav = ({ items }: { items: { title: string; href: string }[] }) => {
+const MobileNav = ({ items }: { items: NavItem[] }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="relative flex items-center justify-between p-2 md:hidden">
@@ -88,6 +95,8 @@ const MobileNav = ({ items }: { items: { title: string; href: string }[] }) => {
                   key={item.title}
                   className="px-4 py-2 font-medium text-gray-600 transition duration-200 hover:text-neutral-900 dark:text-gray-300 dark:hover:text-neutral-300"
                   onClick={() => setIsOpen(false)}
+                  {...(item.target && { target: item.target })}
+                  {...(item.rel && { rel: item.rel })}
                 >
                   <motion.div
                     key={item.title}
@@ -123,7 +132,7 @@ const MobileNav = ({ items }: { items: { title: string; href: string }[] }) => {
 const DesktopNav = ({
   items,
 }: {
-  items: { title: string; href: string }[];
+  items: NavItem[];
 }) => {
   return (
     <div className="hidden items-center justify-between px-4 py-4 md:flex">
@@ -134,6 +143,8 @@ const DesktopNav = ({
             className="font-medium text-gray-600 transition duration-200 hover:text-neutral-900 dark:text-gray-300 dark:hover:text-neutral-300"
             href={item.href}
             key={item.title}
+            {...(item.target && { target: item.target })}
+            {...(item.rel && { rel: item.rel })}
           >
             {item.title}
           </Link>
@@ -152,7 +163,7 @@ const DesktopNav = ({
 const FloatingNav = ({
   items,
 }: {
-  items: { title: string; href: string }[];
+  items: NavItem[];
 }) => {
   const { scrollY } = useScroll();
   const springConfig = {
@@ -175,6 +186,8 @@ const FloatingNav = ({
             className="font-medium text-gray-600 transition duration-200 hover:text-neutral-900 dark:text-gray-300 dark:hover:text-neutral-300"
             href={item.href}
             key={item.title}
+            {...(item.target && { target: item.target })}
+            {...(item.rel && { rel: item.rel })}
           >
             {item.title}
           </Link>

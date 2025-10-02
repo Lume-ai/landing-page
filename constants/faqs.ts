@@ -17,7 +17,7 @@ export const faqs = [
   {
     question: "Is my data secure when using AI agents?",
     answer:
-      "Yes. Security and compliance are built in from day one. We support SOC II, GDPR, and HIPAA standards, with encryption, role-based access, and full audit trails for every agent action. You stay in control of your data at all times.",
+      "Yes. Security and compliance are built in from day one. We support SOC II Type 2 security standards, with encryption, role-based access, and full audit trails for every agent action. You stay in control of your data at all times.",
   },
   {
     question: "Can I test workflows before they go live?",

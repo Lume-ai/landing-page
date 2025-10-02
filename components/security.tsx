@@ -35,27 +35,11 @@ export const Security = () => {
         </div>
         <div className="flex items-center justify-center gap-10">
           <Image
-            src="/logos/CCPA.png"
-            alt="CCPA"
-            height={100}
-            width={100}
-            className="h-auto w-14"
-            draggable={false}
-          />
-          <Image
-            src="/logos/GDPR.png"
-            alt="GDPR"
-            height={100}
-            width={100}
-            className="h-auto w-14"
-            draggable={false}
-          />
-          <Image
-            src="/logos/ISO.png"
-            alt="ISO"
-            height={100}
-            width={100}
-            className="h-auto w-14"
+            src="/logos/security/SOC22.png"
+            alt="SOC2"
+            height={200}
+            width={200}
+            className="h-auto w-36"
             draggable={false}
           />
         </div>

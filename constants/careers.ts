@@ -5,46 +5,6 @@ export enum Department {
 }
 
 export const careers = [
-  // Internships
-  {
-    id: "intern-software-engineer",
-    title: "Software Engineering Intern",
-    department: Department.INTERNSHIPS,
-    location: "New York, NY ",
-    type: "Internship",
-    href: "#",
-    createdAt: "2025-07-15",
-    description:
-      "Join our engineering team as an intern and work on cutting-edge AI workflow automation tools. You'll contribute to real product features while learning from industry experts.",
-    shortDescription:
-      "Build the future of AI workflows alongside our engineering team. Contribute to real features used by developers worldwide.",
-    requirements: [
-      "Currently pursuing a degree in Computer Science or related field",
-      "Experience with JavaScript/TypeScript, React, or similar technologies",
-      "Strong problem-solving skills and eagerness to learn",
-      "Available for 10-12 week internship program",
-    ],
-  },
-  {
-    id: "intern-product-design",
-    title: "Product Design Intern",
-    department: Department.INTERNSHIPS,
-    location: "New York, NY ",
-    type: "Internship",
-    href: "#",
-    createdAt: "2025-07-15",
-    description:
-      "Help design the future of AI-driven workflow tools. You'll work closely with our design team to create intuitive user experiences for complex automation systems.",
-    shortDescription:
-      "Shape the visual experience of AI workflows. Design interfaces that make complex automation simple and intuitive.",
-    requirements: [
-      "Currently pursuing a degree in Design, HCI, or related field",
-      "Proficiency in Figma, Sketch, or similar design tools",
-      "Portfolio demonstrating UI/UX design skills",
-      "Understanding of design systems and user-centered design principles",
-    ],
-  },
-
   // Engineering
   {
     id: "senior-frontend-engineer",

@@ -6,7 +6,7 @@ import { SubHeading } from "@/components/subheading";
 import { getSEOTags } from "@/lib/seo";
 
 export const metadata = getSEOTags({
-    title: "Cookie Policy | Notus",
+    title: "Cookie Policy | Lume AI",
     description: "Learn about how we use cookies and similar tracking technologies on our website.",
 });
 

@@ -6,7 +6,7 @@ import { SubHeading } from "@/components/subheading";
 import { getSEOTags } from "@/lib/seo";
 
 export const metadata = getSEOTags({
-    title: "Terms of Service | Notus",
+    title: "Terms of Service | Lume AI",
     description: "Read our terms of service to understand the rules and regulations for using our platform.",
 });
 

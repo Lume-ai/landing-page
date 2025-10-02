@@ -34,7 +34,7 @@ export const tiers = [
     ctaLink: "https://cal.com/team/lume/lume-intro-20",
     features: [
       "Everything in Business, plus:",
-      "SOC 2, GDPR, and HIPAA readiness",
+      "SOC 2 Type 2security readiness",
       "Role-based access controls & audit trails",
       "Private cloud & on-prem deployment options",
       "Advanced security & compliance features",
