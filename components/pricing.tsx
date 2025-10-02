@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container } from "./container";
 import { Badge } from "./badge";
 import { SectionHeading } from "./seciton-heading";
@@ -11,6 +11,7 @@ import { CheckIcon } from "@/icons/card-icons";
 import { Scale } from "./scale";
 import { tiers } from "@/constants/pricing";
 import Link from "next/link";
+import { Input } from "./ui/input";
 
 export const Pricing = () => {
   const tabs = [
@@ -26,6 +27,72 @@ export const Pricing = () => {
     },
   ];
   const [activeTier, setActiveTier] = useState<"monthly" | "yearly">("monthly");
+  const [tierEmails, setTierEmails] = useState<Record<string, string>>({});
+  const [email, setEmail] = useState("");
+  const debounceTimersRef = useRef<Record<string, NodeJS.Timeout>>({});
+  const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Debounced email capture for tier-specific inputs
+  const handleTierEmailChange = (tierTitle: string, emailValue: string) => {
+    setTierEmails(prev => ({ ...prev, [tierTitle]: emailValue }));
+
+    if (!emailValue || !emailValue.includes('@')) return;
+
+    // Clear previous timer for this tier
+    if (debounceTimersRef.current[tierTitle]) {
+      clearTimeout(debounceTimersRef.current[tierTitle]);
+    }
+
+    // Set new timer for this tier
+    debounceTimersRef.current[tierTitle] = setTimeout(async () => {
+      try {
+        await fetch('/api/capture-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: emailValue,
+            tier: tierTitle,
+            billingPeriod: activeTier
+          }),
+        });
+      } catch (error) {
+        console.error('Failed to capture email:', error);
+      }
+    }, 4000);
+  };
+
+  // Debounced email capture for bottom CTA
+  useEffect(() => {
+    if (!email || !email.includes('@')) return;
+
+    // Clear previous timer
+    if (debounceTimerRef.current) {
+      clearTimeout(debounceTimerRef.current);
+    }
+
+    // Set new timer
+    debounceTimerRef.current = setTimeout(async () => {
+      try {
+        await fetch('/api/capture-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        });
+      } catch (error) {
+        console.error('Failed to capture email:', error);
+      }
+    }, 2000); // 2 second debounce
+
+    return () => {
+      if (debounceTimerRef.current) {
+        clearTimeout(debounceTimerRef.current);
+      }
+    };
+  }, [email]);
   return (
     <section className="">
       <Container className="border-divide flex flex-col items-center justify-center border-x pt-10 pb-10">
@@ -83,8 +150,15 @@ export const Pricing = () => {
                     <Step key={tierFeature + tierIdx + idx}>{tierFeature}</Step>
                   ))}
                 </div>
-                <Button
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={tierEmails[tier.title] || ""}
+                  onChange={(e) => handleTierEmailChange(tier.title, e.target.value)}
                   className="mt-6 w-full"
+                />
+                <Button
+                  className="mt-4 w-full"
                   as={Link}
                   href={tier.ctaLink}
                   target="_blank"
@@ -120,8 +194,15 @@ export const Pricing = () => {
         <h3 className="text-2xl font-medium dark:text-white">
           Let&apos;s discuss the right plan for your business.
         </h3>
+        <Input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="mt-6 max-w-md"
+        />
         <Button
-          className="mt-6"
+          className="mt-4"
           as={Link}
           href="https://cal.com/team/lume/lume-intro-20"
           target="_blank"

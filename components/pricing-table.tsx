@@ -8,6 +8,9 @@ import { Button } from "./button";
 import { SlidingNumber } from "./sliding-number";
 import Link from "next/link";
 
+// UNUSED COMPONENT ------------------------------------------------------------
+// TODO: Remove this component if we don't need it
+// -----------------------------------------------------------------------------
 export const PricingTable = () => {
   const [cycle, setCycle] = useState<"monthly" | "yearly">("monthly");
 

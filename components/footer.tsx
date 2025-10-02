@@ -7,11 +7,11 @@ import { SubHeading } from "./subheading";
 export const Footer = () => {
   const product = [
     {
-      title: "Agent Builder",
+      title: "AI Workflow Automation",
       href: "#",
     },
     {
-      title: "Simulation",
+      title: "Agent Management",
       href: "#",
     },
     {
@@ -19,7 +19,7 @@ export const Footer = () => {
       href: "#",
     },
     {
-      title: "Multi Agent",
+      title: "Custom Deployments",
       href: "#",
     }
   ];

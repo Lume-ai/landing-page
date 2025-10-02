@@ -20,8 +20,10 @@ export const tiers = [
       "Real-time dashboards & activity logs",
       "Exception handling & human-in-the-loop",
       "Continuous improvement with feedback learning",
-      "Email & chat support",
+      "Slack, Teams, and Email support",
+      "Direct phone number of founders for support",
     ],
+    featured: true,
   },
   {
     title: TierName.TIER_2,
