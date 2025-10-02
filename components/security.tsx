@@ -30,7 +30,7 @@ export const Security = () => {
             as={Link}
             href="/pricing"
           >
-            Start for free
+            Book a free consultation
           </Button>
         </div>
         <div className="flex items-center justify-center gap-10">

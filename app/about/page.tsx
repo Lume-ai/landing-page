@@ -17,9 +17,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = getSEOTags({
-  title: "About Us - Notus | Aceternity UI Pro Template",
+  title: "About Us - Lume | AI Agentic Workflow Automation",
   description:
-    "We're Building the Future of Agent-Driven Development. Founded by engineers and AI researchers, Notus was born out of a simple frustration: building intelligent systems still required too much manual orchestration. We set out to change that by creating a tool that lets teams design, simulate, and launch autonomous agents visually and intuitively.",
+    "We're Building the Future of Agent-Driven Development. Founded by engineers and AI researchers, Lume was born out of a simple frustration: building intelligent systems still required too much manual orchestration. We set out to change that by creating a tool that lets teams design, simulate, and launch autonomous agents visually and intuitively.",
 });
 
 export default function AboutPage() {
@@ -44,7 +44,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                We founded <span className="font-semibold">Notus</span> with a
+                We founded <span className="font-semibold">Lume</span> with a
                 simple mission:{" "}
                 <span className="italic">
                   to bring AI agents into the heart of business operations, so
@@ -60,7 +60,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                Today, Notus helps organizations streamline critical operations
+                Today, Lume helps organizations streamline critical operations
                 across logistics, manufacturing, finance, and HR. From shipment
                 scheduling to invoice reconciliation, our AI agents deliver real
                 outcomes: fewer errors, lower costs, and faster execution.
@@ -87,35 +87,49 @@ export default function AboutPage() {
           <h2 className="mb-4 min-w-40 text-center font-mono text-sm tracking-tight text-neutral-500 uppercase lg:mb-0 lg:text-left dark:text-neutral-400">
             As featured in
           </h2>
-          <div className="grid w-full grid-cols-2 items-center gap-4 md:grid-cols-4">
-            <Image
-              src="/logos/bloomberg.png"
-              alt="Bloomberg"
-              width={140}
-              height={140}
-              className="h-6 w-auto object-contain dark:invert dark:filter"
-            />
-            <Image
-              src="/logos/wired.png"
-              alt="Bloomberg"
-              width={140}
-              height={140}
-              className="h-6 w-auto object-contain dark:invert dark:filter"
-            />
-            <Image
-              src="/logos/forbes.png"
-              alt="Bloomberg"
-              width={140}
-              height={140}
-              className="h-6 w-auto object-contain dark:invert dark:filter"
-            />
-            <Image
-              src="/logos/the-guardian.png"
-              alt="Bloomberg"
-              width={140}
-              height={140}
-              className="h-6 w-auto object-contain dark:invert dark:filter"
-            />
+          <div className="grid w-full grid-cols-2 items-center gap-4 md:grid-cols-3">
+            <a
+              href="https://techcrunch.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity"
+            >
+              <Image
+                src="/logos/media_logos/techcrunch.png"
+                alt="Techcrunch"
+                width={140}
+                height={140}
+                className="h-32 w-auto object-contain dark:invert dark:filter"
+              />
+            </a>
+            <a
+              href="https://forbes.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity"
+            >
+              <Image
+                src="/logos/media_logos/forbes.png"
+                alt="Forbes"
+                width={140}
+                height={140}
+                className="h-32 w-auto object-contain dark:invert dark:filter"
+              />
+            </a>
+            <a
+              href="https://siliconangle.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity"
+            >
+              <Image
+                src="/logos/media_logos/siliconangle.png"
+                alt="Siliconangle"
+                width={140}
+                height={140}
+                className="h-32 w-auto object-contain dark:invert dark:filter"
+              />
+            </a>
           </div>
         </div>
       </Container>
@@ -128,8 +142,7 @@ export default function AboutPage() {
               Helping Engineering Teams Focus on Important Things
             </SectionHeading>
             <SubHeading className="mt-6 mr-auto text-left">
-              We empower developers and technical teams to create, simulate, and
-              manage AI-driven workflows visually
+              We bring AI agents into the heart of business operations, so companies can run faster, leaner, and more intelligently.
             </SubHeading>
             {/* <div className="divide-divide mt-8 grid grid-cols-3 gap-6">
               <MetricBlock value="1.2M+" label="Workflows created" />
@@ -147,8 +160,7 @@ export default function AboutPage() {
           Team of Industry Leaders
         </SectionHeading>
         <SubHeading className="mx-auto mt-6 max-w-lg px-4">
-          We empower developers and technical teams to create, simulate, and
-          manage AI-driven workflows visually
+          We bring AI agents into the heart of business operations, so companies can run faster, leaner, and more intelligently.
         </SubHeading>
         <div className="mt-12 grid w-full grid-cols-1 gap-6 px-4 md:grid-cols-2 md:px-8 lg:grid-cols-3">
           {founders.map((founder) => (
@@ -217,7 +229,7 @@ export default function AboutPage() {
                 ))}
                 <div className="flex size-10 items-center justify-center rounded-full bg-gray-300">
                   <p className="text-charcoal-700 text-sm font-medium">
-                    {founders.length - 3}+
+                    +
                   </p>
                 </div>
               </div>
@@ -225,28 +237,43 @@ export default function AboutPage() {
             <h2 className="mt-8 text-left font-mono text-sm tracking-tight text-neutral-500 uppercase dark:text-neutral-400">
               Our Investors
             </h2>
-            <div className="mt-8 grid w-full grid-cols-3 items-center gap-10 md:grid-cols-3">
-              <Image
-                src="/logos/y-combinator.png"
-                alt="Investor 1"
-                width={120}
-                height={120}
-                className="h-6 w-auto object-contain dark:invert dark:filter"
-              />
-              <Image
-                src="/logos/accel.png"
-                alt="Investor 2"
-                width={70}
-                height={70}
-                className="h-6 w-auto object-contain dark:invert dark:filter"
-              />
-              <Image
-                src="/logos/softbank.png"
-                alt="Investor 3"
-                width={140}
-                height={140}
-                className="h-6 w-auto object-contain dark:invert dark:filter"
-              />
+            <div className="mt-8 grid w-full grid-cols-4 items-center gap-10 md:grid-cols-4">
+              <div className="relative h-10">
+                <Image
+                  src="/logos/investor_logos/gcicon.svg"
+                  alt="Investor 1"
+                  width={120}
+                  height={120}
+                  className="absolute inset-0 h-6 w-full object-contain dark:invert dark:filter"
+                />
+              </div>
+              <div className="relative h-10">
+                <Image
+                  src="/logos/investor_logos/ycicon.svg"
+                  alt="Investor 2"
+                  width={70}
+                  height={70}
+                  className="absolute inset-0 h-6 w-full object-contain dark:invert dark:filter"
+                />
+              </div>
+              <div className="relative h-10">
+                <Image
+                  src="/logos/investor_logos/khosla.svg"
+                  alt="Investor 3"
+                  width={140}
+                  height={140}
+                  className="absolute inset-0 h-6 w-full object-contain dark:invert dark:filter"
+                />
+              </div>
+              <div className="relative h-10">
+                <Image
+                  src="/logos/investor_logos/floodgateicon.svg"
+                  alt="Investor 3"
+                  width={140}
+                  height={140}
+                  className="absolute inset-0 h-6 w-full object-contain dark:invert dark:filter"
+                />
+              </div>
             </div>
           </div>
           <div className="divide-divide border-divide divide-y border-t lg:border-t-0">

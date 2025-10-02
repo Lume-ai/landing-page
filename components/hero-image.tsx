@@ -73,7 +73,7 @@ export const HeroImage = () => {
           <Image
             src="/hero_prod_2_1.png"
             alt="Hero Image"
-            className="w-full"
+            className="w-full rounded-lg"
             priority
             width={1500}
             height={859}

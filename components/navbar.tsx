@@ -25,7 +25,9 @@ const items = [
   },
   {
     title: "Careers",
-    href: "/careers",
+    href: "https://app.dover.com/jobs/lume",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     title: "Blog",
