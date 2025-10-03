@@ -35,7 +35,7 @@ export const Security = () => {
         </div>
         <div className="flex items-center justify-center gap-10">
           <Image
-            src="/logos/security/SOC22.png"
+            src="/logos/security/SOC2.png"
             alt="SOC2"
             height={200}
             width={200}
