@@ -412,13 +412,21 @@ const AssistantMessage = ({
 export const NativeToolsIntegrationSkeleton = () => {
   return (
     <>
-      <div className="relative mx-auto my-24 h-full w-full scale-[2] sm:scale-[1.5] md:scale-[1.2] lg:hidden">
+      <div className="relative mx-auto my-24 h-auto w-full max-w-full lg:hidden">
         <Image
-          src="/illustrations/native-tools-integration.svg"
+          src="/illustrations/native-tools-integration-sm-static.png"
           alt="Native Tools Integration"
-          width={1200}
-          height={1200}
-          className="dark:invert dark:filter"
+          width={654}
+          height={331}
+          className="h-auto w-full object-contain dark:hidden"
+        />
+        {/* shows dark mode image (without auto inversion if in dark mode) */}
+        <Image
+          src="/illustrations/native-tools-integration-sm-static-dark.png"
+          alt="Native Tools Integration"
+          width={654}
+          height={331}
+          className="hidden h-auto w-full object-contain dark:block"
         />
       </div>
       <motion.div className="relative mx-auto my-12 hidden h-full max-h-70 min-h-80 max-w-[67rem] grid-cols-2 p-4 lg:grid">
