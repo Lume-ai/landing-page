@@ -28,8 +28,8 @@ export const DesignYourWorkflowSkeleton = () => {
     <div className="mt-12 flex flex-col items-center">
       <div className="relative">
         <Card
-          title="SAP"
-          subtitle="TMS"
+          title="Oracle"
+          subtitle="Customer ERP"
           logo={<SAPLogo />}
           cta="Connected"
           tone="default"
@@ -41,26 +41,26 @@ export const DesignYourWorkflowSkeleton = () => {
 
       <div className="mt-12 flex flex-row gap-4.5">
         <Card
-          title="Call Operator"
-          subtitle="Call Center"
+          title="Schema Discovery"
+          subtitle="AI Analysis"
           logo={<AnthropicLogo />}
-          cta="Call Operator"
+          cta="Analyzing"
           tone="danger"
           delay={0.2}
         />
         <Card
           title="OpenAI"
-          subtitle="GPT-5"
+          subtitle="Data Mapper"
           logo={<OpenAILogo />}
-          cta="Agent Orchestrator"
+          cta="Mapping Fields"
           tone="success"
           delay={0.6}
         />
         <Card
-          title="Excel"
-          subtitle="Input Data"
+          title="Snowflake"
+          subtitle="Your Warehouse"
           logo={<ExcelLogo size={6} />}
-          cta="Data Generator"
+          cta="Ready"
           tone="default"
           delay={0.4}
         />
@@ -70,7 +70,7 @@ export const DesignYourWorkflowSkeleton = () => {
 };
 
 export const ConnectYourTooklsSkeleton = () => {
-  const text = `Extract HS codes from invoices and fill out customs forms.`;
+  const text = `Map customer_id to user_uuid, normalize timestamps, and validate data quality.`;
   const [mounted, setMounted] = useState(false);
   const randomWidth = useMemo(() => Math.random() * 100, [mounted]);
 
@@ -181,7 +181,7 @@ export const ConnectYourTooklsSkeleton = () => {
           <div className="flex items-center gap-2">
             <SAPLogo className="h-4 w-4 shrink-0" />
             <span className="text-charcoal-700 text-xs font-medium md:text-sm dark:text-neutral-200">
-              SAP
+              Oracle Database
             </span>
           </div>
 
@@ -193,7 +193,7 @@ export const ConnectYourTooklsSkeleton = () => {
           <div className="flex items-center gap-2">
             <ExcelLogo className="h-4 w-4 shrink-0" />
             <span className="text-charcoal-700 text-xs font-medium md:text-sm dark:text-neutral-200">
-              Manual Documents
+              Customer CSV Files
             </span>
           </div>
 
@@ -234,81 +234,81 @@ export const DeployAndScaleSkeleton = () => {
   // Define deploy cards data for reusability
   const deployCards = [
     {
-      title: "customs-declare-eu-324",
+      title: "schema-mapped-acme-corp",
       subtitle: "2h ago",
-      process: "customs",
+      process: "mapping",
       variant: "success" as const,
     },
     {
-      title: "shipment-clear-ap-223",
+      title: "data-validated-widgets-inc",
       subtitle: "1h ago",
-      process: "shipping",
+      process: "validation",
       variant: "success" as const,
     },
     {
-      title: "invoice-match-us-445",
+      title: "field-conflict-global-llc",
       subtitle: "45m ago",
-      process: "finance",
+      process: "review",
       variant: "warning" as const,
     },
     {
-      title: "rate-quote-eu-128",
+      title: "dbt-code-generated-tech-co",
       subtitle: "10m ago",
-      process: "procurement",
+      process: "transform",
       variant: "success" as const,
     },
     {
-      title: "inventory-update-us-891",
+      title: "integration-failed-legacy-sys",
       subtitle: "7h ago",
-      process: "inventory",
+      process: "connection",
       variant: "danger" as const,
     },
     {
-      title: "hs-classify-ap-556",
+      title: "schema-discovered-oracle-db",
       subtitle: "4h ago",
-      process: "customs",
+      process: "discovery",
       variant: "warning" as const,
     },
     {
-      title: "duty-calc-eu-672",
+      title: "customer-approved-mapping",
       subtitle: "5h ago",
-      process: "customs",
+      process: "collaboration",
       variant: "default" as const,
     },
     {
-      title: "customer-notify-prod-445",
+      title: "data-quality-check-passed",
       subtitle: "6h ago",
-      process: "service",
+      process: "quality",
       variant: "success" as const,
     },
     {
-      title: "delivery-confirm-us-337",
+      title: "sap-connection-established",
       subtitle: "3h ago",
-      process: "last-mile",
+      process: "connection",
       variant: "success" as const,
     },
     {
-      title: "po-generate-ap-778",
+      title: "transform-deployed-prod",
       subtitle: "30m ago",
-      process: "procurement",
+      process: "deployment",
       variant: "success" as const,
     },
     {
-      title: "invoice-reconcile-eu-119",
+      title: "anomaly-detected-revenue",
       subtitle: "8h ago",
-      process: "finance",
+      process: "validation",
       variant: "warning" as const,
     },
     {
-      title: "shipment-delay-alert-ap-441",
+      title: "pipeline-sync-failed-retry",
       subtitle: "20m ago",
-      process: "shipping",
+      process: "sync",
       variant: "danger" as const,
     },
     {
-      title: "export-docs-us-555",
+      title: "csv-import-normalized",
       subtitle: "9h ago",
-      process: "compliance",
+      process: "normalization",
       variant: "default" as const,
     },
   ];
@@ -429,22 +429,28 @@ export const DeployAndScaleSkeleton = () => {
 // Helper function to get the appropriate icon for each process type
 const getProcessIcon = (process: string) => {
   switch (process) {
-    case "customs":
-      return PackageIcon;
-    case "shipping":
-      return TruckIcon;
-    case "finance":
-      return InvoiceIcon;
-    case "procurement":
-      return CartIcon;
-    case "inventory":
-      return PackageIcon;
-    case "service":
-      return HeadsetIcon;
-    case "last-mile":
-      return TruckIcon;
-    case "compliance":
+    case "mapping":
+      return ForkIcon;
+    case "validation":
       return ShieldCheckIcon;
+    case "review":
+      return HeadsetIcon;
+    case "transform":
+      return PackageIcon;
+    case "connection":
+      return TruckIcon;
+    case "discovery":
+      return PackageIcon;
+    case "collaboration":
+      return HeadsetIcon;
+    case "quality":
+      return ShieldCheckIcon;
+    case "deployment":
+      return CartIcon;
+    case "sync":
+      return TruckIcon;
+    case "normalization":
+      return InvoiceIcon;
     default:
       return PackageIcon;
   }

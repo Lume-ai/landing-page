@@ -432,13 +432,13 @@ export const NativeToolsIntegrationSkeleton = () => {
       <motion.div className="relative mx-auto my-12 hidden h-full max-h-70 min-h-80 max-w-[67rem] grid-cols-2 p-4 lg:grid">
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-10">
-            <TextIconBlock icon={<WindowIcon />} text="Shipment Documentation Automation">
+            <TextIconBlock icon={<WindowIcon />} text="Schema Discovery & Mapping">
               <TopSVG className="absolute top-2 -right-84" />
             </TextIconBlock>
-            <TextIconBlock icon={<CodeIcon />} text="Freight Booking & Scheduling">
+            <TextIconBlock icon={<CodeIcon />} text="dbt Code Generation">
               <MiddleSVG className="absolute top-2 -right-84" />
             </TextIconBlock>
-            <TextIconBlock icon={<PhoneIcon />} text="Exception Management in Supply Chain">
+            <TextIconBlock icon={<PhoneIcon />} text="Customer Collaboration & Approval">
               <BottomSVG className="absolute -right-84 bottom-2" />
             </TextIconBlock>
           </div>

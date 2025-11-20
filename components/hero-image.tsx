@@ -1,9 +1,13 @@
 "use client";
 import React, { useRef } from "react";
 import { Container } from "./container";
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { Dot } from "./common/dots";
+
+const Lottie = dynamic(() => import("react-lottie-player/dist/LottiePlayerLight"), {
+  ssr: false,
+});
 
 const springConfig = {
   stiffness: 300,
@@ -42,7 +46,7 @@ export const HeroImage = () => {
   };
 
   return (
-    <Container className="border-divide relative flex items-start justify-start border-x bg-gray-100 p-2 perspective-distant md:p-4 lg:p-8 dark:bg-neutral-800">
+    <Container className="border-divide relative flex items-start justify-start border-x p-2 perspective-distant md:p-4 lg:p-8">
       <Dot top left />
       <Dot top right />
       <Dot bottom left />
@@ -70,17 +74,14 @@ export const HeroImage = () => {
             translateY,
           }}
         >
-          <Image
-            src="/product/dashboard_hero.png"
-            alt="Hero Image"
+          <Lottie
+            loop
+            play
+            path="https://lottie.host/b5899916-3443-462a-b6d4-f7971df4fa77/jnTQLVTFsD.json"
             className="w-full rounded-lg"
-            priority
-            width={1500}
-            height={859}
-            draggable={false}
+            style={{ width: "100%", height: "auto" }}
           />
         </motion.div>
-        <div className="absolute inset-0 z-0 m-auto h-[90%] w-[95%] rounded-lg border border-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed"></div>
       </div>
     </Container>
   );
