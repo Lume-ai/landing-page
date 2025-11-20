@@ -32,21 +32,21 @@ export const AgenticIntelligence = () => {
       <div className="flex flex-col items-center py-16">
         <Badge text="Features" />
         <SectionHeading className="mt-4">
-          Built for Agentic Intelligence
+          Built for Modern Data Teams
         </SectionHeading>
 
         <SubHeading as="p" className="mx-auto mt-6 max-w-lg px-2">
-          Enterprise-grade AI agents that integrate with your existing systems and adapt to your workflows — from logistics and supply chain to finance, HR, and compliance.
+          AI-powered integration platform that connects to any system, understands messy data, and generates production-ready code—all while keeping your team in control.
         </SubHeading>
         <div className="w-full mt-16">
           <Card className="relative w-full max-w-none overflow-hidden">
             <div className="pointer-events-none absolute inset-0 h-full w-full bg-[radial-gradient(var(--color-dots)_1px,transparent_1px)] mask-radial-from-10% [background-size:10px_10px]"></div>
             <div className="flex items-center gap-2">
               <NativeIcon />
-              <CardTitle>Native Tools Integration</CardTitle>
+              <CardTitle>Universal System Connectivity</CardTitle>
             </div>
             <CardDescription>
-              Connect seamlessly with ERP, TMS, WMS, CRM, HRIS, and finance platforms. Every agent action is logged with triggers, tools used, outcomes, and timestamps.
+              Connect to any customer system: Oracle, SAP, Salesforce, NetSuite, custom databases, APIs, or flat files. Lume automatically discovers schemas and relationships.
             </CardDescription>
             <NativeToolsIntegrationSkeleton />
           </Card>
@@ -55,28 +55,28 @@ export const AgenticIntelligence = () => {
           <Card>
             <div className="flex items-center gap-2">
               <BellIcon className="size-6" />
-              <CardTitle>Exception Handling & Human-in-the-Loop</CardTitle>
+              <CardTitle>AI-Powered Data Mapping</CardTitle>
             </div>
             <CardDescription>
-              Agents automatically escalate edge cases to your team, ensuring smooth operations while keeping humans in control of critical decisions.
+              AI analyzes customer schemas and suggests intelligent mappings to your data model. Review, approve, and deploy with confidence.
             </CardDescription>
           </Card>
           <Card>
             <div className="flex items-center gap-2">
               <GraphIcon className="size-6" />
-              <CardTitle>Continuous Improvement</CardTitle>
+              <CardTitle>Automated Code Generation</CardTitle>
             </div>
             <CardDescription>
-              Agents learn from historical outcomes and operator feedback, reducing errors and getting smarter over time — without manual reprogramming.
+              Generate production-ready dbt models, SQL transformations, and data validation rules automatically—no manual coding required.
             </CardDescription>
           </Card>
           <Card>
             <div className="flex items-center gap-2">
               <RocketIcon className="size-6" />
-              <CardTitle>Rapid Deployment</CardTitle>
+              <CardTitle>Customer Collaboration Portal</CardTitle>
             </div>
             <CardDescription>
-              Skip the endless workflow setup. Our team deploys tailored AI agents directly into your processes, delivering value in days, not months.
+              Work with customers in shared workspaces. Track progress, approve data definitions, and manage the entire integration project together.
             </CardDescription>
           </Card>
         </div>

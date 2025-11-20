@@ -17,9 +17,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = getSEOTags({
-  title: "About Us - Lume | AI Agentic Workflow Automation",
+  title: "About Us - Lume | AI-Powered Customer Integration Platform",
   description:
-    "We're Building the Future of Agent-Driven Development. Founded by engineers and AI researchers, Lume was born out of a simple frustration: building intelligent systems still required too much manual orchestration. We set out to change that by creating a tool that lets teams design, simulate, and launch autonomous agents visually and intuitively.",
+    "We're helping software teams ship customer integrations 10x faster. Founded by engineers who spent years building data pipelines, Lume automates the painful work of connecting to legacy systems, mapping messy data, and generating transformation code.",
 });
 
 export default function AboutPage() {
@@ -31,44 +31,43 @@ export default function AboutPage() {
           <div className="flex flex-col items-start justify-start">
             <Badge text="About Us" />
             <Heading className="mt-4 text-left">
-              We're Building the Future of Autonomous Business Operations
+              We're Fixing Customer Onboarding for Software Teams
             </Heading>
             {/* <SubHeading className="mt-6 mr-auto text-left"> */}
             <div className="space-y-6 text-left text-gray-700 leading-relaxed mt-12 dark:text-neutral-200">
 
               <p>
-                Manual processes still dominate the backbone of business — from
-                logistics and supply chains to finance and compliance. Endless
-                handoffs, spreadsheets, and exceptions slow teams down and cost
-                companies millions.
+                Every B2B software company faces the same problem: customer
+                integrations take forever. Connecting to legacy ERPs, mapping messy
+                data, and writing transformation code consumes months of engineering
+                time and delays time-to-value for customers.
               </p>
 
               <p>
                 We founded <span className="font-semibold">Lume</span> with a
                 simple mission:{" "}
                 <span className="italic">
-                  to bring AI agents into the heart of business operations, so
-                  companies can run faster, leaner, and more intelligently.
+                  to help software teams ship customer integrations 10x faster with AI.
                 </span>
               </p>
 
               <p>
-                Our team of engineers and AI researchers believes automation should
-                go beyond static scripts and rigid RPA. That's why we're building
-                agents that reason, act, and adapt — powering the workflows that
-                keep businesses moving.
+                Our team of data engineers has spent years wrestling with Oracle
+                databases, SAP systems, and custom ERPs. We know the pain of manual
+                data mapping, endless schema discovery calls, and generating the same
+                transformation code over and over again.
               </p>
 
               <p>
-                Today, Lume helps organizations streamline critical operations
-                across logistics, manufacturing, finance, and HR. From shipment
-                scheduling to invoice reconciliation, our AI agents deliver real
-                outcomes: fewer errors, lower costs, and faster execution.
+                Today, Lume helps software teams automate the entire customer
+                integration lifecycle. From connecting to any database, to AI-powered
+                data mapping, to generating production-ready dbt code—we handle the
+                heavy lifting so your team can focus on building product.
               </p>
 
               <p className="font-medium text-gray-900 dark:text-white">
-                Because the future of work isn't just about automating tasks. <br />
-                It's about <span className="text-indigo-600 dark:text-indigo-400">autonomous operations at scale.</span>
+                Because customer onboarding shouldn't take months. <br />
+                It should take <span className="text-indigo-600 dark:text-indigo-400">days.</span>
               </p>
             </div>
             {/* </SubHeading> */}
@@ -130,10 +129,10 @@ export default function AboutPage() {
           <div className="flex flex-col items-start justify-start">
             <Badge text="Journey and Values" />
             <SectionHeading className="mt-4 text-left">
-              Helping Engineering Teams Focus on Important Things
+              Helping Engineering Teams Ship Faster
             </SectionHeading>
             <SubHeading className="mt-6 mr-auto text-left">
-              We bring AI agents into the heart of business operations, so companies can run faster, leaner, and more intelligently.
+              We automate the painful work of customer integrations so your team can focus on building great products, not wrestling with data pipelines.
             </SubHeading>
             {/* <div className="divide-divide mt-8 grid grid-cols-3 gap-6">
               <MetricBlock value="1.2M+" label="Workflows created" />
@@ -151,7 +150,7 @@ export default function AboutPage() {
           Team of Industry Leaders
         </SectionHeading>
         <SubHeading className="mx-auto mt-6 max-w-lg px-4">
-          We bring AI agents into the heart of business operations, so companies can run faster, leaner, and more intelligently.
+          Built by engineers who have spent years solving data integration challenges at scale. We're on a mission to make customer onboarding painless.
         </SubHeading>
         <div className="mt-12 grid w-full grid-cols-1 gap-6 px-4 md:grid-cols-2 md:px-8 lg:grid-cols-3">
           {founders.map((founder) => (
@@ -195,13 +194,13 @@ export default function AboutPage() {
           <div className="flex flex-col items-start justify-start px-4 py-10 md:px-8 md:py-20">
             <Badge text="Careers" />
             <SectionHeading className="mt-4 text-left">
-              Let's Change How Modern <br />
-              Enterprise Teams Function
+              Let's Fix Customer <br />
+              Onboarding Together
             </SectionHeading>
             <SubHeading className="mt-6 mr-auto max-w-md text-left">
               Building a generational company requires exceptional, hard-working
-              people. We are tackling the complexities of commerce
-              infrastructure that no one else has dared to.
+              people. We're solving one of the hardest problems in B2B software:
+              making customer integrations fast, reliable, and painless.
             </SubHeading>
             <div className="mt-4 flex items-center gap-2">
               <p className="text-charcoal-700 text-base font-medium dark:text-neutral-100">

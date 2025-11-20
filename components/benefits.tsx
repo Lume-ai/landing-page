@@ -26,39 +26,39 @@ import { VerticalLine } from "./common/vertical-line";
 export const Benefits = () => {
   const benefits = [
     {
-      title: "Faster Operations",
+      title: "10x Faster Onboarding",
       description:
-        "Cut processing times from days to minutes by automating shipment booking, documentation, and reconciliations.",
+        "Reduce customer integration time from months to days with AI-powered data mapping and automated transformations.",
       icon: <RocketIcon className="text-brand size-6" />,
     },
     {
-      title: "Lower Costs",
+      title: "Lower Engineering Costs",
       description:
-        "Reduce reliance on outsourcing and manual labor, saving up to 50% on operational expenses.",
+        "Free up your engineering team from manual data mapping work. Save hundreds of hours per integration.",
       icon: <RealtimeSyncIcon className="text-brand size-6" />,
     },
     {
-      title: "Fewer Errors",
+      title: "Fewer Data Errors",
       description:
-        "Eliminate mistakes in paperwork, scheduling, and compliance with agents that validate and cross-check every step.",
+        "AI validates schemas, detects anomalies, and ensures data quality before it enters your system.",
       icon: <GraphIcon className="text-brand size-6" />,
     },
     {
-      title: "Resilient Supply Chains",
+      title: "Handle Any System",
       description:
-        "Prevent costly breakdowns with real-time exception handling — rerouting, rescheduling, and alerting before issues escalate.",
+        "Connect to legacy databases (Oracle, SAP, custom ERPs), modern APIs, or flat files—no matter how messy the source.",
       icon: <ShieldIcon className="text-brand size-6" />,
     },
     {
-      title: "Scalable Efficiency",
+      title: "Scale Your Team",
       description:
-        "Start with one workflow, expand to dozens. AI agents grow with your business across logistics, finance, HR, and beyond.",
+        "Onboard more customers without hiring more integration engineers. AI handles the repetitive work automatically.",
       icon: <ReuseBrainIcon className="text-brand size-6" />,
     },
     {
-      title: "Full Visibility",
+      title: "Collaborative Workspace",
       description:
-        "Track every agent action — triggers, tools used, outcomes, and success rates — with dashboards and audit logs.",
+        "Work with customers in shared spaces. Track progress, approve mappings, and manage data definitions together.",
       icon: <ScreenCogIcon className="text-brand size-6" />,
     },
   ];
@@ -67,11 +67,11 @@ export const Benefits = () => {
       <div className="relative flex flex-col items-center">
         <Badge text="Benefits" />
         <SectionHeading className="mt-4">
-          Run Operations 10x Faster
+          Onboard Customers 10x Faster
         </SectionHeading>
 
         <SubHeading as="p" className="mx-auto mt-6 max-w-lg">
-          Reduce manual effort, eliminate errors, and keep your supply chain moving with autonomous AI agents.
+          Stop wrestling with customer data. Automate mapping, validation, and transformation so you can ship integrations in days, not months.
         </SubHeading>
       </div>
       <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -92,7 +92,7 @@ export const Benefits = () => {
 };
 
 const MiddleCard = () => {
-  const texts = ["Customs form submitted", "Bill of lading generated", "Data synced to ERP"];
+  const texts = ["Schema mapped", "Data normalized", "dbt code generated"];
   const [activeText, setActiveText] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {

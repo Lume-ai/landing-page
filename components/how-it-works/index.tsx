@@ -23,25 +23,25 @@ type Tab = {
 export const HowItWorks = () => {
   const tabs = [
     {
-      title: "Choose a workflow",
+      title: "Connect customer systems",
       description:
-        "Work with the Lume team to create, connect, and configure custom agents into logical workflows tailored to your needs. Or choose from our library of out-of-the-box agents that seamlessly configure to your existing systems and processes.",
+        "Connect to your customer's ERP, database, or API. Lume automatically discovers schemas, tables, and relationships—no matter how complex or outdated the system is.",
       icon: FirstIcon,
       id: "workflow",
       skeleton: <DesignYourWorkflowSkeleton />,
     },
     {
-      title: "Deploy an agent and connect your tools",
+      title: "AI maps and validates data",
       description:
-        "Seamlessly integrate your AI agents with your existing tech stack. Connect to your CRM, databases, APIs, and communication tools with pre-built integrations. Our agents work with the tools you already use, requiring minimal setup and configuration.",
+        "Our AI analyzes customer data, suggests mappings to your schema, and validates data quality. You review and approve, while AI handles the heavy lifting of field matching and transformation logic.",
       icon: SecondIcon,
       id: "tools",
       skeleton: <ConnectYourTooklsSkeleton />,
     },
     {
-      title: "Monitor & optimize",
+      title: "Generate code & deploy",
       description:
-        "Your agents continuously learn and improve over time, becoming more efficient with every interaction. Track performance metrics in real-time and let AI handle the routine tasks while your team focuses on exceptions that truly need human attention.",
+        "Lume generates production-ready dbt code for your transformations. Deploy directly to your data warehouse, track changes, and collaborate with customers through the entire integration lifecycle.",
       icon: ThirdIcon,
       id: "deploy",
       skeleton: <DeployAndScaleSkeleton />,
@@ -65,10 +65,10 @@ export const HowItWorks = () => {
     <Container className="border-divide border-x">
       <div className="flex flex-col items-center pt-16">
         <Badge text="How it works" />
-        <SectionHeading className="mt-4">Deploy AI agents in 3 simple steps</SectionHeading>
+        <SectionHeading className="mt-4">Ship integrations in 3 simple steps</SectionHeading>
 
         <SubHeading as="p" className="mx-auto mt-6 max-w-lg">
-          From setup to scale, we've streamlined the entire process so you can get your AI agents up and running quickly
+          From customer connection to production deployment—AI handles the complexity while you stay in control
         </SubHeading>
         {/* Desktop Tabs */}
         <div className="border-divide divide-divide mt-16 hidden w-full grid-cols-2 divide-x border-t lg:grid">

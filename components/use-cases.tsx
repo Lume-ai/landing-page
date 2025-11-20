@@ -18,50 +18,50 @@ import { motion } from "motion/react";
 export const UseCases = () => {
   const useCases = [
     {
-      title: "Logistics & Supply Chain",
+      title: "SaaS Customer Onboarding",
       descriptions: [
-        "Freight booking, shipment scheduling, and customs documentation.",
-        "Exception handling for delays, lost shipments, and rerouting.",
+        "Integrate with customer ERPs and databases for faster time-to-value.",
+        "Automated schema discovery and data mapping suggestions.",
       ],
       icon: <TruckIcon className="text-brand size-6" />,
     },
     {
-      title: "Manufacturing & Operations",
+      title: "Data Transformation",
       descriptions: [
-        "Supplier onboarding, quality control reporting, inventory checks.",
-        "Automated production and warehouse scheduling.",
+        "Generate dbt models automatically from customer schemas.",
+        "Normalize messy data into your standard format.",
       ],
       icon: <DevopsIcon className="text-brand size-6" />,
     },
     {
-      title: "Finance & Compliance",
+      title: "Legacy System Integration",
       descriptions: [
-        "Invoice reconciliation, expense approvals, audit prep.",
-        "KYC/AML verification and regulatory reporting.",
+        "Connect to Oracle, SAP, AS400, and custom databases.",
+        "Handle complex joins, nested data, and outdated schemas.",
       ],
       icon: <WalletIcon className="text-brand size-6" />,
     },
     {
-      title: "HR & People Ops",
+      title: "Customer Collaboration",
       descriptions: [
-        "Employee onboarding, payroll processing, and benefits enrollment.",
-        "Training reminders and compliance checks.",
+        "Share mapping progress with customers in real-time.",
+        "Approve data definitions and transformations together.",
       ],
       icon: <GraphIcon className="text-brand size-6" />,
     },
     {
-      title: "Customer & Internal Support",
+      title: "Data Quality & Validation",
       descriptions: [
-        "Ticket triage, SLA escalations, and refund workflows.",
-        "Knowledge retrieval and automated responses.",
+        "Automated data quality checks and anomaly detection.",
+        "Ensure clean data before it enters your system.",
       ],
       icon: <PhoneIcon className="text-brand size-6" />,
     },
     {
-      title: "Admin & Data Ops",
+      title: "Integration Project Management",
       descriptions: [
-        "Document intake and processing, record updates.",
-        "Reporting, dashboard generation, and data syncing.",
+        "Track integration milestones and customer progress.",
+        "Manage data definitions, field mappings, and approvals.",
       ],
       icon: <DatabaseIcon className="text-brand size-6" />,
     },
@@ -72,11 +72,11 @@ export const UseCases = () => {
       <div className="relative flex flex-col items-center py-20">
         <Badge text="Use Cases" />
         <SectionHeading className="mt-4">
-          One platform, endless workflows.
+          One platform for every integration challenge
         </SectionHeading>
 
         <SubHeading as="p" className="mx-auto mt-6 max-w-lg">
-          If it's repetitive, rules-based, or multi-step — your AI agents can do it.
+          From legacy ERPs to modern APIs—automate the entire customer integration lifecycle.
         </SubHeading>
 
         <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">

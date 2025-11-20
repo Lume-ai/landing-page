@@ -13,13 +13,13 @@ import Link from "next/link";
 export const Hero = () => {
   return (
     <Container className="border-divide flex flex-col items-center justify-center border-x px-4 pt-10 pb-10 md:pt-32 md:pb-20">
-      <Badge text="For fast moving logistics, supply chain, and manufacturing teams." />
+      <Badge text="For software teams shipping customer integrations" />
       <Heading className="mt-4">
-        <span className="text-brand">AI Agents</span> for Logistics & Operations{" "}
+        <span className="text-brand">Ship Customer Integrations</span> 10x Faster with AI
       </Heading>
 
       <SubHeading className="mx-auto mt-6 max-w-lg">
-        Automate logistics, finance, and compliance workflows with AI agents that reason, act, and deliver.
+        Automate data mapping, normalize messy customer data, and generate dbt code—so your team can focus on building product, not wrestling with legacy systems.
       </SubHeading>
 
       <div className="mt-6 flex items-center gap-4">
